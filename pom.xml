@@ -250,7 +250,7 @@
         </profile>
     </profiles>
     <modules>
-        <module>apps/administration-server</module>
+        <!-- <module>apps/administration-server</module> -->
         <module>apps/notification-service</module>
     </modules>
 

@@ -20,7 +20,25 @@
     <developers>
         <developer>
             <name>Kevin Borge Tobar</name>
-            <email>jgonzalez@bytesw</email>
+            <email>kborget@umg.edu.gt</email>
+            <roles>
+                <role>developer</role>
+                <role>owner</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>Julio Sincal Aroche</name>
+            <email>jsincala@umg.edu.gt</email>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>Javier Marroquín Sanchez</name>
+            <email>jmarroquins13@umg.edu.gt</email>
+            <roles>
+                <role>developer</role>
+            </roles>
         </developer>
     </developers>
     <properties>

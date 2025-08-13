@@ -156,7 +156,7 @@
                             <workingDirectory>/app</workingDirectory>
                             <creationTime>USE_CURRENT_TIMESTAMP</creationTime>
                             <labels>
-                                <maintainer></maintainer>
+                                <maintainer>kevinborgetonar1998@gmail.com</maintainer>
                             </labels>
                         </container>
                         <from>
@@ -250,7 +250,7 @@
         </profile>
     </profiles>
     <modules>
-        <module>apps/administration-server</module>
+        <module>apps/business-partners-service</module>
         <module>apps/notification-service</module>
     </modules>
 

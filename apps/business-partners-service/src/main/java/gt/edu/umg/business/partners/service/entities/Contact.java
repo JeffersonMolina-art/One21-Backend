@@ -21,7 +21,6 @@ public class Contact {
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "business_partner_id", nullable = false)
     private Partner businessPartner;
 

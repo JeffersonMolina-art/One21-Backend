@@ -2,6 +2,7 @@ package gt.edu.umg.generic.data.controllers;
 
 import gt.edu.umg.generic.data.exceptions.MapperException;
 import gt.edu.umg.generic.data.services.GenericService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,6 +10,8 @@ import java.util.List;
 
 public abstract class GenericController<D, T, ID> {
 
+    @Value("${mode.dev:false}")
+    private String IS_MODE_DEV;
     protected final GenericService<D,T, ID> service;
 
 
@@ -37,6 +40,11 @@ public abstract class GenericController<D, T, ID> {
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable ID id) {
-        service.deleteById(id);
+        if ("true".equalsIgnoreCase(IS_MODE_DEV)) {
+            service.deleteById(id);
+        } else {
+            throw new UnsupportedOperationException("Eliminación no permitida en este modo");
+        }
     }
+
 }

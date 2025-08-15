@@ -1,0 +1,19 @@
+package gt.edu.umg.business.partners.service.controllers;
+
+import gt.edu.umg.business.partners.service.dtos.BankAccountDto;
+import gt.edu.umg.business.partners.service.entities.BankAccount;
+import gt.edu.umg.business.partners.service.services.BankAccountService;
+import gt.edu.umg.generic.data.controllers.GenericController;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RestController
+@RequestMapping("business-partners/accounts-bank/")
+class BankAccountController extends GenericController<BankAccountDto, BankAccount, Integer> {
+
+    private final BankAccountService bankAccountService;
+    public BankAccountController(BankAccountService bankAccountService) {
+        super(bankAccountService);
+        this.bankAccountService = bankAccountService;
+    }
+}

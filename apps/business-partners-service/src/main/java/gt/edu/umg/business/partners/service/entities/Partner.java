@@ -35,7 +35,6 @@ public class Partner {
     private Type type;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @OnDelete(action = OnDeleteAction.SET_NULL)
     @JoinColumn(name = "category_id")
     private Category category;
 

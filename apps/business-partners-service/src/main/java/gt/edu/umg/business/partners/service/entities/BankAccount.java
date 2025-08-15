@@ -44,7 +44,7 @@ public class BankAccount {
     @Column(name = "iban", length = 50)
     private String iban;
 
-    @ColumnDefault("'MXN'")
+    @ColumnDefault("'QTZ'")
     @Column(name = "currency_code", length = 3)
     private String currencyCode;
 

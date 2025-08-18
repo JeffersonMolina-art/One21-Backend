@@ -3,9 +3,9 @@ spring:
     name: business-partners-service
   datasource:
     url: jdbc:mysql://localhost:3306/ERP-BUSSINES-PARTNERS?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-    # url: jdbc:mysql://192.168.1.72:33307/control-informacion?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    # url: jdbc:mysql://192.168.1.73:33307/control-informacion?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
-    password: bytee
+    password: pass
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
@@ -16,3 +16,10 @@ spring:
     properties:
       hibernate:
         format_sql: true
+
+  spring:
+    security:
+      oauth2:
+        resourceserver:
+          jwt:
+            issuer-uri: https://<your-keycloak-server>/realms/<your-realm>

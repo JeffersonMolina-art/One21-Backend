@@ -71,6 +71,10 @@
             <artifactId>jakarta.persistence-api</artifactId>
         </dependency>
         <dependency>
+            <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+            <groupId>org.springframework.boot</groupId>
+        </dependency>
+        <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
         </dependency>

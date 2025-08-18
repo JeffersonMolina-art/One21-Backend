@@ -6,8 +6,10 @@ import gt.edu.umg.business.partners.service.services.CountryService;
 import gt.edu.umg.generic.data.controllers.GenericController;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
 @Slf4j
-@RestController("business-partners/countries/")
+@RestController
+@RequestMapping("business-partners/countries/")
 public class CountryController extends GenericController<CountryDto, Country, Integer> {
 
     private CountryService countryService;

@@ -17,7 +17,7 @@ spring:
         format_sql: true
 
   data:
-    redis-1:
+    redis:
       host: redis
       port: 6379
 

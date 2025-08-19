@@ -67,9 +67,9 @@ public abstract class GenericServiceImpl<D, T, ID> implements GenericService<D, 
     }
 
     private D entityNotNull(T entity) throws MapperException {
-//        if (entity == null) {
-//            throw new MapperException("No se encontraron registros válidos para la búsqueda");
-//        }
+        if (entity == null) {
+           throw new MapperException("No se encontraron registros válidos para la búsqueda");
+        }
         return mapper.toDto(entity, dtoClass);
     }
 }

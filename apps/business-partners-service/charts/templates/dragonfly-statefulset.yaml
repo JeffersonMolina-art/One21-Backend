@@ -1,0 +1,72 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ include "business-partners-service.fullname" . }}-dragonfly
+  labels:
+    app: {{ include "business-partners-service.fullname" . }}-dragonfly
+spec:
+  serviceName: {{ include "business-partners-service.fullname" . }}-dragonfly
+  replicas: {{ .Values.dragonflycache.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "business-partners-service.fullname" . }}-dragonfly
+  template:
+    metadata:
+      labels:
+        app: {{ include "business-partners-service.fullname" . }}-dragonfly
+    spec:
+      containers:
+        - name: dragonfly
+          image: "{{ .Values.dragonflycache.image.repository }}:{{ .Values.dragonflycache.image.tag }}"
+          imagePullPolicy: {{ .Values.dragonflycache.image.pullPolicy }}
+          args:
+            {{- if .Values.dragonflycache.auth.enabled }}
+            - "--requirepass=$(DRAGONFLY_PASSWORD)"
+            {{- end }}
+          ports:
+            - name: redis
+              containerPort: {{ .Values.dragonflycache.containerPort }}
+              protocol: TCP
+          {{- with .Values.dragonflycache.livenessProbe }}
+          livenessProbe:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.dragonflycache.readinessProbe }}
+          readinessProbe:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.dragonflycache.startupProbe }}
+          startupProbe:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          resources:
+            {{- toYaml .Values.dragonflycache.resources | nindent 12 }}
+          volumeMounts:
+            - name: data
+              mountPath: /data
+          {{- if .Values.dragonflycache.auth.enabled }}
+          env:
+            - name: DRAGONFLY_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.dragonflycache.auth.secretName }}
+                  key: {{ .Values.dragonflycache.auth.secretKey }}
+          {{- end }}
+      {{- if not .Values.dragonflycache.persistence.enabled }}
+      volumes:
+        - name: data
+          emptyDir: {}
+      {{- end }}
+  {{- if .Values.dragonflycache.persistence.enabled }}
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: {{ .Values.dragonflycache.persistence.size }}
+        {{- if .Values.dragonflycache.persistence.storageClass }}
+        storageClassName: "{{ .Values.dragonflycache.persistence.storageClass }}"
+        {{- end }}
+  {{- end }}

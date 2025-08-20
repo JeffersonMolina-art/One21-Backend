@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "business-partners-service.fullname" . }}-dragonfly
+  labels:
+    app: {{ include "business-partners-service.fullname" . }}-dragonfly
+spec:
+  type: {{ .Values.dragonflycache.service.type }}
+  ports:
+    - name: redis
+      port: {{ .Values.dragonflycache.service.port }}
+      targetPort: {{ .Values.dragonflycache.containerPort }}
+      protocol: TCP
+  selector:
+    app: {{ include "business-partners-service.fullname" . }}-dragonfly

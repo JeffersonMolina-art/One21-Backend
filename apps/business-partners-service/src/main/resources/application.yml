@@ -1,3 +1,4 @@
+#Configuration file for Business Partners Service
 spring:
   application:
     name: business-partners-service

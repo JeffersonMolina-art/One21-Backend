@@ -35,6 +35,10 @@ jobs:
           java-version: 21
           cache: maven
 
+      - name: Build commons/generic-data
+        working-directory: commons/generic-data
+        run: mvn -B clean install
+
       - name: Build & Test module
         working-directory: ${{ matrix.module }}
         run: mvn -B clean verify

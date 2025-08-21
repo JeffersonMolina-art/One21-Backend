@@ -31,13 +31,13 @@ jobs:
         uses: dorny/paths-filter@v3
         with:
           filters: |
-            business-partners-service:
+            apps/business-partners-service:
               - 'apps/business-partners-service/**'
               - 'commons/generic-data/**'
-            # employee-service:
+            # apps/employee-service:
             #   - 'apps/employee-service/**'
             #   - 'commons/generic-data/**'
-            # notification-service:
+            # apps/notification-service:
             #   - 'apps/notification-service/**'
             #   - 'commons/generic-data/**'
 

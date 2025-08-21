@@ -14,16 +14,16 @@ on:
       environment:
         required: true
         type: string
+      modules:
+        required: true
+        type: string
 
 jobs:
   build:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        module:
-          - apps/business-partners-service
-          # - apps/employee-service
-          # - apps/notification-service
-    runs-on: ubuntu-latest
+        module: ${{ fromJson(inputs.modules) }}
 
     steps:
       - uses: actions/checkout@v4
@@ -41,18 +41,12 @@ jobs:
         working-directory: ${{ matrix.module }}
         run: mvn -B clean compile
 
-    outputs:
-      module: ${{ matrix.module }}
-
   test:
     needs: build
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        module:
-          - apps/business-partners-service
-          - apps/employee-service
-          - apps/notification-service
+        module: ${{ fromJson(inputs.modules) }}
 
     steps:
       - uses: actions/checkout@v4

@@ -17,7 +17,34 @@ on:
     types: [checks_requested]
 
 jobs:
+  detect-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      changed-modules: ${{ steps.filter.outputs.changes }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect changed modules
+        id: filter
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            business-partners-service:
+              - 'apps/business-partners-service/**'
+              - 'commons/generic-data/**'
+            employee-service:
+              - 'apps/employee-service/**'
+              - 'commons/generic-data/**'
+            notification-service:
+              - 'apps/notification-service/**'
+              - 'commons/generic-data/**'
+
   test-build:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.changed-modules != '[]'
     uses: ./.github/workflows/test-build.yml
     with:
       environment: pr-${{ github.event.number || 'merge-queue' }}
+      modules: ${{ needs.detect-changes.outputs.changed-modules }}

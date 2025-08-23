@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
-@RequestMapping("business-partners/cities")
+@RequestMapping("cities")
 public class CityController extends GenericController<CityDto, City, Integer> {
 
     public CityController(CityService cityService) {

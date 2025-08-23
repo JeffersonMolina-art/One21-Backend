@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api/business-partners/addresses/")
+@RequestMapping("addresses/")
 public class AddressController extends GenericController<AddressDto, Address, Integer> {
 
     public AddressController(AddressService addressService) {

@@ -53,10 +53,6 @@ spec:
             - secretRef:
                 name: business-partners-service-secret
           env:
-            - name: SPRING_DATA_REDIS_HOST
-              value: {{ include "business-partners-service.fullname" . }}-dragonfly
-            - name: SPRING_DATA_REDIS_PORT
-              value: "{{ .Values.dragonflycache.service.port }}"
             {{- range .Values.envVars }}
             - name: {{ .name }}
               value: "{{ .value }}"

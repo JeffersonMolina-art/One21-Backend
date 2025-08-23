@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
-@RequestMapping("business-partners/countries/")
+@RequestMapping("countries/")
 public class CountryController extends GenericController<CountryDto, Country, Integer> {
 
     private CountryService countryService;

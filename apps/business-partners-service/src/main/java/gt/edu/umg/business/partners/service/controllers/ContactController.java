@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
-@RequestMapping("api/business-partners/contacts/")
+@RequestMapping("contacts/")
 public class ContactController extends GenericController<ContactDto, Contact, Integer> {
 
     public ContactController(ContactService contactService) {

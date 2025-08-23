@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
-@RestController("types/")
+@RestController("types")
 public class TypeController<TypeDto, Type, Integer> {
 
     private final TypeService typeService;

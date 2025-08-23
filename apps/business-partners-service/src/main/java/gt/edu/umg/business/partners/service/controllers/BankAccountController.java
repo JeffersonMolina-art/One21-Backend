@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
-@RequestMapping("bank-accounts/")
+@RequestMapping("bank-accounts")
 class BankAccountController extends GenericController<BankAccountDto, BankAccount, Integer> {
 
     public BankAccountController(BankAccountService bankAccountService) {

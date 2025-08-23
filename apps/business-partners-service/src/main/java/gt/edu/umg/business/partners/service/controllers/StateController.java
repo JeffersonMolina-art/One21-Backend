@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-@RequestMapping("states/")
+@RequestMapping("states")
 public class StateController extends GenericController<StateDto, State, Integer> {
 
     public StateController(StateService stateService) {

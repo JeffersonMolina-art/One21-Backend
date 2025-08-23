@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-@RequestMapping("partners/")
+@RequestMapping("partners")
 public class PartnerController extends GenericController<PartnerDto, Partner, Integer> {
 
     public PartnerController(PartnerService partnerService) {

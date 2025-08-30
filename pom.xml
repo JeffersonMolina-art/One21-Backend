@@ -270,6 +270,7 @@
         <module>commons/generic-data</module>
         <module>apps/business-partners-service</module>
         <module>apps/notification-service</module>
+        <module>apps/ticket-service</module>
     </modules>
 
 </project>

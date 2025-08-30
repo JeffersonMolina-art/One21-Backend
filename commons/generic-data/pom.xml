@@ -43,11 +43,6 @@
             <version>${modelmapper.version}</version>
         </dependency>
         <dependency>
-            <groupId>gt.edu.umg</groupId>
-            <artifactId>generic-data</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>

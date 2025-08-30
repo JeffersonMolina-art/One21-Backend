@@ -5,10 +5,12 @@ import gt.edu.umg.business.partners.service.entities.Category;
 import gt.edu.umg.business.partners.service.services.CategoryService;
 import gt.edu.umg.generic.data.controllers.GenericController;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
-@RestController("business-partners/categories/")
+@RestController()
+@RequestMapping("partners/categories")
 public class CategoryController extends GenericController<CategoryDto, Category, Integer> {
     private final CategoryService categoryService;
 

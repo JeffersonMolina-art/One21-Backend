@@ -6,16 +6,14 @@ import gt.edu.umg.business.partners.service.services.ContactService;
 import gt.edu.umg.generic.data.controllers.GenericController;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 @RequestMapping("partners/contacts")
 public class ContactController extends GenericController<ContactDto, Contact, Integer> {
 
-    private final ContactService contactService;
-
     public ContactController(ContactService contactService) {
         super(contactService);
-        this.contactService = contactService;
     }
 }

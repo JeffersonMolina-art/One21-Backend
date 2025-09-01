@@ -11,11 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("partners/addresses")
 public class AddressController extends GenericController<AddressDto, Address, Integer> {
 
-    private final AddressService addressService;
-
     public AddressController(AddressService addressService) {
         super(addressService);
-        this.addressService = addressService;
     }
 
 

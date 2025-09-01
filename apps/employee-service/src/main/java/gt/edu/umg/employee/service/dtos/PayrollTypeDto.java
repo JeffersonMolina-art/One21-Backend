@@ -1,7 +1,7 @@
 package gt.edu.umg.employee.service.dtos;
 
 
-import lombok.Value;
+import lombok.*;
 
 import java.io.Serializable;
 import java.time.Instant;
@@ -9,7 +9,10 @@ import java.time.Instant;
 /**
  * DTO for {@link gt.edu.umg.employee.service.entities.PayrollType}
  */
-@Value
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 public class PayrollTypeDto implements Serializable {
     Integer id;
     String code;

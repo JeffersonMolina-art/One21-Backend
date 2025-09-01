@@ -54,9 +54,6 @@
         <swagger.version>2.8.9</swagger.version>
         <redis.version>3.0.0</redis.version>
 
-        <!-- Compilar con JDK 21 apuntando a APIs de Java 17 para máxima compatibilidad -->
-        <maven.compiler.release>17</maven.compiler.release>
-
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -145,6 +142,11 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-actuator</artifactId>
                 <version>3.4.6</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${redis.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -277,6 +279,7 @@
         <module>commons/generic-data</module>
         <module>apps/business-partners-service</module>
         <module>apps/notification-service</module>
+        <module>apps/ticket-service</module>
         <module>apps/employee-service</module>
     </modules>
 

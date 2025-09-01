@@ -1,8 +1,7 @@
 package gt.edu.umg.employee.service.dtos;
 
 import gt.edu.umg.employee.service.entities.PerformanceReviewTemplate;
-
-import lombok.Value;
+import lombok.*;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -12,7 +11,10 @@ import java.time.LocalDate;
 /**
  * DTO for {@link gt.edu.umg.employee.service.entities.EmployeePerformanceReview}
  */
-@Value
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 public class EmployeePerformanceReviewDto implements Serializable {
     Integer id;
     EmployeeDto employee;

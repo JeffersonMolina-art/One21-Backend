@@ -3,9 +3,10 @@ spring:
   application:
     name: business-partners-service
   datasource:
-    url: jdbc:mysql://dev-db-mysql-do-user-11817333-0.e.db.ondigitalocean.com:25060/ERP-BUSSINES-PARTNERS?ssl-mode=VERIFY_CA&serverTimezone=UTC&allowPublicKeyRetrieval=true
-    username: doadmin
-    password: ${DB_PASSWORD}
+    url: jdbc:mysql://localhost:3306/ERP-BUSSINES-PARTNERS?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    # url: jdbc:mysql://192.168.1.72:33307/control-informacion?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: Sincal200
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:

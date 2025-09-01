@@ -1,7 +1,7 @@
 package gt.edu.umg.employee.service.dtos;
 
 
-import lombok.Value;
+import lombok.*;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -10,7 +10,10 @@ import java.time.Instant;
 /**
  * DTO for {@link gt.edu.umg.employee.service.entities.JobPosition}
  */
-@Value
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 public class JobPositionDto implements Serializable {
     Integer id;
     String code;

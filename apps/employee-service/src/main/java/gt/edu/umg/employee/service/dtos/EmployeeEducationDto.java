@@ -1,7 +1,7 @@
 package gt.edu.umg.employee.service.dtos;
 
 
-import lombok.Value;
+import lombok.*;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -11,7 +11,10 @@ import java.time.LocalDate;
 /**
  * DTO for {@link gt.edu.umg.employee.service.entities.EmployeeEducation}
  */
-@Value
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 public class EmployeeEducationDto implements Serializable {
     Integer id;
     EmployeeDto employee;

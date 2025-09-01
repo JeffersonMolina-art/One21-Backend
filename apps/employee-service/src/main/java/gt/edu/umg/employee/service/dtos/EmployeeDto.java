@@ -1,47 +1,30 @@
 package gt.edu.umg.employee.service.dtos;
 
-import gt.edu.umg.employee.service.entities.Employee;
-import gt.edu.umg.employee.service.entities.JobPosition;
-import gt.edu.umg.employee.service.entities.PayrollType;
-
-import lombok.Value;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.time.Instant;
-import java.time.LocalDate;
 
 /**
  * DTO for {@link gt.edu.umg.employee.service.entities.Employee}
  */
-@Value
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 public class EmployeeDto implements Serializable {
     Integer id;
-    Integer businessPartnerId;
-    String employeeNumber;
-    LocalDate hireDate;
-    LocalDate startDate;
-    LocalDate endDate;
-    DepartmentDto department;
-    JobPosition jobPosition;
-    Employee reportsToEmployee;
-    ContractTypeDto contractType;
-    PayrollType payrollType;
-    BigDecimal baseSalary;
-    String currencyCode;
-    String workSchedule;
-    String workLocation;
-    Boolean isRemote;
-    String employmentStatus;
-    Boolean isEligibleOvertime;
-    Boolean isProbation;
-    LocalDate probationEndDate;
-    String emergencyContactName;
-    String emergencyContactPhone;
-    String emergencyContactRelationship;
-    String notes;
-    Integer createdBy;
-    Integer updatedBy;
+    String code;
+    String firstName;
+    String lastName;
+    String email;
+    String phoneNumber;
+    Instant hireDate;
+    Boolean isActive;
     Instant createdAt;
     Instant updatedAt;
 }
+

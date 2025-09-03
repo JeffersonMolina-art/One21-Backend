@@ -120,16 +120,6 @@ envVars:
   - name: JPA_PROPERTIES_HIBERNATE_FORMAT_SQL
     value: "true"
 
-
-#PRODUCTION ENVIRONMENT VARIABLES
-# envVars:
-#   - name: SPRING_APPLICATION_NAME
-#     value: "employee-service"
-#   - name: JPA_HIBERNATE_DDL_AUTO
-#     value: "none"
-#   - name: JPA_DATABASE_PLATFORM
-    # value: "org.hibernate.dialect.MySQL8Dialect"
-
 generatorLabel: draft
 
 # Dragonfly Cache Configuration

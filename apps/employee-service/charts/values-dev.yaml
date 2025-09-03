@@ -116,7 +116,7 @@ envVars:
   - name: SPRING_JPA_SHOW_SQL
     value: "true"
   - name: SPRING_JPA_DATABASE_PLATFORM
-    value: "org.hibernate.dialect.MySQLDialect"
+    value: "org.hibernate.dialect.MySQL8Dialect"
   - name: SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL
     value: "true"
 

@@ -111,13 +111,13 @@ securityContext:
 envVars:
   - name: SPRING_APPLICATION_NAME
     value: "employee-service"
-  - name: JPA_HIBERNATE_DDL_AUTO
+  - name: SPRING_JPA_HIBERNATE_DDL_AUTO
     value: "none"
-  - name: JPA_SHOW_SQL
+  - name: SPRING_JPA_SHOW_SQL
     value: "true"
-  - name: JPA_DATABASE_PLATFORM
-    value: "org.hibernate.dialect.MySQL8Dialect"
-  - name: JPA_PROPERTIES_HIBERNATE_FORMAT_SQL
+  - name: SPRING_JPA_DATABASE_PLATFORM
+    value: "org.hibernate.dialect.MySQLDialect"
+  - name: SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL
     value: "true"
 
 generatorLabel: draft

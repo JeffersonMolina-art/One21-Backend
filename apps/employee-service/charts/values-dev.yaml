@@ -5,11 +5,11 @@ replicaCount: 1
 
 namespace: dev-one21
 
-containerPort: 8082
+containerPort: 8080
 
 image:
-  repository: seminariojalapa/employee-service
-  tag: '0.0.5-SNAPSHOT-20250820.065620'
+  repository: seminariojalapa/dev-employee-service
+  tag: '1'
   pullPolicy: Always
 
 imagePullSecrets: []
@@ -46,10 +46,10 @@ autoscaling:
 
 livenessProbe:
   tcpSocket:
-    port: 8082
+    port: 8080
 readinessProbe:
   tcpSocket:
-    port: 8082
+    port: 8080
   periodSeconds: 5
   timeoutSeconds: 5
   failureThreshold: 1
@@ -57,12 +57,12 @@ readinessProbe:
   initialDelaySeconds: 3
 startupProbe:
   tcpSocket:
-    port: 8082
+    port: 8080
   periodSeconds: 10
-  timeoutSeconds: 3
+  timeoutSeconds: 10
   failureThreshold: 30
   successThreshold: 1
-  initialDelaySeconds: 5
+  initialDelaySeconds: 20
 
 nodeSelector: {}
 
@@ -119,16 +119,6 @@ envVars:
     value: "org.hibernate.dialect.MySQL8Dialect"
   - name: JPA_PROPERTIES_HIBERNATE_FORMAT_SQL
     value: "true"
-
-
-#PRODUCTION ENVIRONMENT VARIABLES
-# envVars:
-#   - name: SPRING_APPLICATION_NAME
-#     value: "employee-service"
-#   - name: JPA_HIBERNATE_DDL_AUTO
-#     value: "none"
-#   - name: JPA_DATABASE_PLATFORM
-    # value: "org.hibernate.dialect.MySQL8Dialect"
 
 generatorLabel: draft
 

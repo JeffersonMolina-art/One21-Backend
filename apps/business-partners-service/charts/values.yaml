@@ -111,9 +111,9 @@ securityContext:
 envVars:
   - name: SPRING_APPLICATION_NAME
     value: "business-partners-service"
-  - name: JPA_HIBERNATE_DDL_AUTO
+  - name: SPRING_JPA_HIBERNATE_DDL_AUTO
     value: "none"
-  - name: JPA_DATABASE_PLATFORM
+  - name: SPRING_JPA_DATABASE_PLATFORM
     value: "org.hibernate.dialect.MySQL8Dialect"
 
 generatorLabel: draft

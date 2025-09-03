@@ -34,9 +34,9 @@ jobs:
             apps/business-partners-service:
               - 'apps/business-partners-service/**'
               - 'commons/generic-data/**'
-            # apps/employee-service:
-            #   - 'apps/employee-service/**'
-            #   - 'commons/generic-data/**'
+            apps/employee-service:
+              - 'apps/employee-service/**'
+              - 'commons/generic-data/**'
             # apps/notification-service:
             #   - 'apps/notification-service/**'
             #   - 'commons/generic-data/**'

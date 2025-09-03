@@ -1,4 +1,4 @@
-name: Deploy Business Partners Service to Prod Environment
+name: Deploy Employee Service to Prod Environment
 
 on:
   push:

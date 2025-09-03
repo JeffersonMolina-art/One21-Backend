@@ -1,4 +1,4 @@
-name: Deploy Business Partners Service to Dev Environment
+name: Deploy Employee Service to Dev Environment
 
 on:
   push:

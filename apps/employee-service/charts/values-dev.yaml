@@ -1,4 +1,4 @@
-# Default values for emmployee-service.
+# Default values for employee-service.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 replicaCount: 1
@@ -8,7 +8,7 @@ namespace: dev-one21
 containerPort: 8082
 
 image:
-  repository: seminariojalapa/emmployee-service
+  repository: seminariojalapa/employee-service
   tag: '0.0.5-SNAPSHOT-20250820.065620'
   pullPolicy: Always
 
@@ -74,7 +74,7 @@ topologySpreadConstraints:
     whenUnsatisfiable: ScheduleAnyway
     labelSelector:
       matchLabels:
-        app.kubernetes.io/name: emmployee-service
+        app.kubernetes.io/name: employee-service
 
 affinity:
   podAntiAffinity:
@@ -84,7 +84,7 @@ affinity:
         topologyKey: kubernetes.io/hostname
         labelSelector:
           matchLabels:
-            app.kubernetes.io/name: emmployee-service
+            app.kubernetes.io/name: employee-service
 
 securityContext:
   seccompProfile:
@@ -110,7 +110,7 @@ securityContext:
 
 envVars:
   - name: SPRING_APPLICATION_NAME
-    value: "emmployee-service"
+    value: "employee-service"
   - name: JPA_HIBERNATE_DDL_AUTO
     value: "none"
   - name: JPA_SHOW_SQL
@@ -124,7 +124,7 @@ envVars:
 #PRODUCTION ENVIRONMENT VARIABLES
 # envVars:
 #   - name: SPRING_APPLICATION_NAME
-#     value: "emmployee-service"
+#     value: "employee-service"
 #   - name: JPA_HIBERNATE_DDL_AUTO
 #     value: "none"
 #   - name: JPA_DATABASE_PLATFORM
@@ -173,7 +173,7 @@ dragonflycache:
 
   auth:
     enabled: false             
-    secretName: emmployee-service-dragonfly-secret
+    secretName: employee-service-dragonfly-secret
     secretKey: password
     autoCreate: false
     password: ""               

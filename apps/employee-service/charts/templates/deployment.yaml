@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "emmployee-service.fullname" . }}
+  name: {{ include "employee-service.fullname" . }}
   labels:
-    {{- include "emmployee-service.labels" . | nindent 4 }}
+    {{- include "employee-service.labels" . | nindent 4 }}
   namespace: {{ .Values.namespace }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
@@ -11,7 +11,7 @@ spec:
   {{- end }}
   selector:
     matchLabels:
-      {{- include "emmployee-service.selectorLabels" . | nindent 6 }}
+      {{- include "employee-service.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -19,7 +19,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "emmployee-service.selectorLabels" . | nindent 8 }}
+        {{- include "employee-service.selectorLabels" . | nindent 8 }}
       namespace: {{ .Values.namespace }}
     spec:
       {{- with .Values.imagePullSecrets }}
@@ -49,9 +49,9 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           envFrom:
             - configMapRef:
-                name: {{ include "emmployee-service.fullname" . }}-config
+                name: {{ include "employee-service.fullname" . }}-config
             - secretRef:
-                name: emmployee-service-secret
+                name: employee-service-secret
           env:
             {{- range .Values.envVars }}
             - name: {{ .name }}

@@ -1,10 +1,10 @@
 
-{{- define "emmployee-service.name" -}}
+{{- define "employee-service.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 
-{{- define "emmployee-service.fullname" -}}
+{{- define "employee-service.fullname" -}}
 {{- if .Values.fullnameOverride }}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -18,14 +18,14 @@
 {{- end }}
 
 
-{{- define "emmployee-service.chart" -}}
+{{- define "employee-service.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 
-{{- define "emmployee-service.labels" -}}
-helm.sh/chart: {{ include "emmployee-service.chart" . }}
-{{ include "emmployee-service.selectorLabels" . }}
+{{- define "employee-service.labels" -}}
+helm.sh/chart: {{ include "employee-service.chart" . }}
+{{ include "employee-service.selectorLabels" . }}
 kubernetes.azure.com/generator: {{ .Values.generatorLabel }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
@@ -34,7 +34,7 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- end }}
 
 
-{{- define "emmployee-service.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "emmployee-service.name" . }}
+{{- define "employee-service.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "employee-service.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}

@@ -5,11 +5,11 @@ replicaCount: 1
 
 namespace: one21
 
-containerPort: 8082
+containerPort: 8080
 
 image:
   repository: seminariojalapa/employee-service
-  tag: '0.0.5-SNAPSHOT-20250820.065620'
+  tag: '1'
   pullPolicy: Always
 
 imagePullSecrets: []
@@ -46,10 +46,10 @@ autoscaling:
 
 livenessProbe:
   tcpSocket:
-    port: 8082
+    port: 8080
 readinessProbe:
   tcpSocket:
-    port: 8082
+    port: 8080
   periodSeconds: 5
   timeoutSeconds: 5
   failureThreshold: 1
@@ -57,7 +57,7 @@ readinessProbe:
   initialDelaySeconds: 3
 startupProbe:
   tcpSocket:
-    port: 8082
+    port: 8080
   periodSeconds: 10
   timeoutSeconds: 3
   failureThreshold: 30

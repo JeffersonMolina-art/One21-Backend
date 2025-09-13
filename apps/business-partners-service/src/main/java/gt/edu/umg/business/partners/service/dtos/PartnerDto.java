@@ -1,13 +1,13 @@
 package gt.edu.umg.business.partners.service.dtos;
 
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.time.Instant;
-import java.time.LocalDate;
 
 /**
  * DTO for {@link gt.edu.umg.business.partners.service.entities.Partner}
@@ -17,27 +17,20 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class PartnerDto implements Serializable {
     Integer id;
+    @NotNull
+    @Size(max = 20)
     String code;
+    @NotNull
+    @Size(max = 200)
     String name;
-    String commercialName;
-    TypeDto type;
-    CategoryDto category;
+    @Size(max = 50)
     String taxId;
-    String legalForm;
+    @Size(max = 100)
     String email;
-    String phone;
-    String website;
-    BigDecimal creditLimit;
-    Integer paymentTermsDays;
-    BigDecimal discountPercentage;
-    String bankName;
-    String bankAccount;
     Boolean isActive;
     Boolean isCustomer;
     Boolean isVendor;
     Boolean isEmployee;
-    LocalDate registrationDate;
-    LocalDate lastTransactionDate;
     String notes;
     Integer createdBy;
     Integer updatedBy;

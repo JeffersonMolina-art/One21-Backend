@@ -1,5 +1,7 @@
 package gt.edu.umg.business.partners.service.dtos;
 
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -16,19 +18,18 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class ContactDto implements Serializable {
     Integer id;
-    PartnerDto businessPartner;
+    @NotNull
+    @Size(max = 100)
     String firstName;
+    @NotNull
+    @Size(max = 100)
     String lastName;
-    String title;
-    String position;
-    String department;
-    String email;
+    @Size(max = 20)
     String phone;
-    String mobile;
-    String extension;
-    Boolean isMainContact;
     Boolean isActive;
     LocalDate birthDate;
     Instant createdAt;
     Instant updatedAt;
+    @NotNull
+    PartnerDto businessPartner;
 }

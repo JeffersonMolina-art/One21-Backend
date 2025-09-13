@@ -1,6 +1,8 @@
 package gt.edu.umg.business.partners.service.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.ColumnDefault;
@@ -10,22 +12,17 @@ import java.time.Instant;
 @Getter
 @Setter
 @Entity
-@Table(name = "types", schema = "ERP-BUSSINES-PARTNERS")
-public class Type {
+@Table(name = "municipalities")
+public class Municipality {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    @Column(name = "code", nullable = false, length = 20)
-    private String code;
-
-    @Column(name = "name", nullable = false, length = 50)
+    @Size(max = 100)
+    @NotNull
+    @Column(name = "name", nullable = false, length = 100)
     private String name;
-
-    @Lob
-    @Column(name = "description")
-    private String description;
 
     @ColumnDefault("1")
     @Column(name = "is_active")
@@ -38,5 +35,10 @@ public class Type {
     @ColumnDefault("CURRENT_TIMESTAMP")
     @Column(name = "updated_at")
     private Instant updatedAt;
+
+    @NotNull
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "departments_id", nullable = false)
+    private Department departments;
 
 }

@@ -1,27 +1,27 @@
 package gt.edu.umg.business.partners.service.dtos;
 
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.time.Instant;
 
 /**
- * DTO for {@link gt.edu.umg.business.partners.service.entities.Category}
+ * DTO for {@link gt.edu.umg.business.partners.service.entities.Department}
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CategoryDto implements Serializable {
+public class DepartmentDto implements Serializable {
     Integer id;
-    String code;
+    @NotNull
+    CountryDto country;
+    @NotNull
+    @Size(max = 100)
     String name;
-    String description;
-    BigDecimal discountPercentage;
-    BigDecimal creditLimit;
-    Integer paymentTermsDays;
     Boolean isActive;
     Instant createdAt;
     Instant updatedAt;

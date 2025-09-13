@@ -1,6 +1,8 @@
 package gt.edu.umg.business.partners.service.dtos;
 
-import lombok.Value;
+import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -10,7 +12,9 @@ import java.time.LocalDate;
 /**
  * DTO for {@link gt.edu.umg.business.partners.service.entities.Partner}
  */
-@Value
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class PartnerDto implements Serializable {
     Integer id;
     String code;

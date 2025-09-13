@@ -1,6 +1,8 @@
 package gt.edu.umg.business.partners.service.dtos;
 
-import lombok.Value;
+import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.time.Instant;
@@ -9,7 +11,9 @@ import java.time.LocalDate;
 /**
  * DTO for {@link gt.edu.umg.business.partners.service.entities.Contact}
  */
-@Value
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ContactDto implements Serializable {
     Integer id;
     PartnerDto businessPartner;

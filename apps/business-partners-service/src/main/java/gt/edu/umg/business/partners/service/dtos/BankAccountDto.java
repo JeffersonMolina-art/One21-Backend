@@ -1,6 +1,8 @@
 package gt.edu.umg.business.partners.service.dtos;
 
-import lombok.Value;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.time.Instant;
@@ -8,7 +10,9 @@ import java.time.Instant;
 /**
  * DTO for {@link gt.edu.umg.business.partners.service.entities.BankAccount}
  */
-@Value
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class BankAccountDto implements Serializable {
     Integer id;
     PartnerDto businessPartner;

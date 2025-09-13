@@ -1,6 +1,8 @@
 package gt.edu.umg.business.partners.service.dtos;
 
-import lombok.Value;
+import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -9,7 +11,9 @@ import java.time.Instant;
 /**
  * DTO for {@link gt.edu.umg.business.partners.service.entities.Category}
  */
-@Value
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class CategoryDto implements Serializable {
     Integer id;
     String code;

@@ -11,12 +11,12 @@ import java.io.Serializable;
 import java.time.Instant;
 
 /**
- * DTO for {@link gt.edu.umg.employee.service.entities.JobPosition}
+ * DTO for {@link gt.edu.umg.employee.service.entities.EmployeeDepartment}
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class JobPositionDto implements Serializable {
+public class EmployeeDepartmentDto implements Serializable {
     Integer id;
     @NotNull
     @Size(max = 20)
@@ -24,8 +24,6 @@ public class JobPositionDto implements Serializable {
     @NotNull
     @Size(max = 120)
     String name;
-    @Size(max = 255)
-    String description;
     @NotNull
     Boolean isActive;
     Instant createdAt;

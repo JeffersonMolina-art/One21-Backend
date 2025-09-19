@@ -281,6 +281,7 @@
         <module>apps/notification-service</module>
         <module>apps/ticket-service</module>
         <module>apps/employee-service</module>
+        <module>apps/customer-service</module>
     </modules>
 
 </project>

@@ -12,8 +12,8 @@ import java.time.Instant;
 @Getter
 @Setter
 @Entity
-@Table(name = "job_positions")
-public class JobPosition {
+@Table(name = "employee_departments")
+public class EmployeeDepartment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -28,10 +28,6 @@ public class JobPosition {
     @NotNull
     @Column(name = "name", nullable = false, length = 120)
     private String name;
-
-    @Size(max = 255)
-    @Column(name = "description")
-    private String description;
 
     @NotNull
     @ColumnDefault("1")

@@ -11,23 +11,21 @@ import java.io.Serializable;
 import java.time.Instant;
 
 /**
- * DTO for {@link gt.edu.umg.employee.service.entities.JobPosition}
+ * DTO for {@link gt.edu.umg.employee.service.entities.EmployeeEmergencyContact}
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class JobPositionDto implements Serializable {
+public class EmployeeEmergencyContactDto implements Serializable {
     Integer id;
     @NotNull
-    @Size(max = 20)
-    String code;
+    EmployeeDto employee;
     @NotNull
-    @Size(max = 120)
+    @Size(max = 150)
     String name;
-    @Size(max = 255)
-    String description;
-    @NotNull
-    Boolean isActive;
+    @Size(max = 30)
+    String phone;
+    @Size(max = 60)
+    String relationship;
     Instant createdAt;
-    Instant updatedAt;
 }

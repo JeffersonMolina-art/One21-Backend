@@ -4,15 +4,15 @@ on:
   push:
     branches: ['develop']
     paths:
-      - 'apps/ticket-service/**'
+      - 'apps/business-partners-service/**'
       - 'commons/generic-data/**'
 
 concurrency:
-  group: ticket-service-deploy-dev-one21
+  group: business-partners-service-deploy-dev-one21
   cancel-in-progress: true
 
 env:
-  IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/dev-ticket-service
+  IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/dev-business-partners-service
   IMAGE_TAG: ${{ github.run_number }}
 
 jobs:
@@ -39,14 +39,14 @@ jobs:
           mvn -Dmaven.test.skip \
               -Djacoco.skip \
               -Ddependency-check.skip=true \
-              -f apps/ticket-service \
+              -f apps/business-partners-service \
               compile package
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: service-jar
-          path: apps/ticket-service/target/*.jar
+          path: apps/business-partners-service/target/*.jar
 
   docker-build:
     name: Build & Push Docker Image with Jib
@@ -72,7 +72,7 @@ jobs:
           mvn -Dmaven.test.skip \
               -Djacoco.skip \
               -Ddependency-check.skip=true \
-              -f apps/ticket-service \
+              -f apps/business-partners-service \
               compile jib:dockerBuild \
               -Dimage=${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
 
@@ -106,8 +106,8 @@ jobs:
       - name: Deploy with Helm
         run: |
           helm upgrade --install ${{ vars.BUSINESS_PARTNERS_DEPLOY_NAME }} \
-            -f ./apps/ticket-service/charts/values-dev.yaml \
-            ./apps/ticket-service/charts/ \
+            -f ./apps/business-partners-service/charts/values-dev.yaml \
+            ./apps/business-partners-service/charts/ \
             --namespace ${{ vars.NAMESPACE }} \
             --create-namespace \
             --set image.repository=${{ env.IMAGE_NAME }} \

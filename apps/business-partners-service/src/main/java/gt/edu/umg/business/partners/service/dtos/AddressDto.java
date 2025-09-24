@@ -2,8 +2,8 @@ package gt.edu.umg.business.partners.service.dtos;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.Data;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
@@ -17,6 +17,8 @@ import java.time.Instant;
 @NoArgsConstructor
 public class AddressDto implements Serializable {
     Integer id;
+    @NotNull
+    PartnerDto businessPartner;
     String addressType;
     @NotNull
     @Size(max = 200)
@@ -32,5 +34,5 @@ public class AddressDto implements Serializable {
     Instant createdAt;
     Instant updatedAt;
     @NotNull
-    PartnerDto businessPartner;
+    MunicipalityDto municipality;
 }

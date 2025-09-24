@@ -6,20 +6,23 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.ColumnDefault;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
 
 import java.time.Instant;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "addresses")
+@Table(name = "addresses", schema = "ERP-BUSSINES-PARTNERS")
 public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
+
+    @NotNull
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "business_partner_id", nullable = false)
+    private Partner businessPartner;
 
     @ColumnDefault("'BILLING'")
     @Lob
@@ -61,8 +64,7 @@ public class Address {
 
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JoinColumn(name = "business_partner_id", nullable = false)
-    private Partner businessPartner;
+    @JoinColumn(name = "municipalities_id", nullable = false)
+    private Municipality municipality;
 
 }

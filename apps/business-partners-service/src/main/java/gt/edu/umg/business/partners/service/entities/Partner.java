@@ -8,13 +8,11 @@ import lombok.Setter;
 import org.hibernate.annotations.ColumnDefault;
 
 import java.time.Instant;
-import java.util.LinkedHashSet;
-import java.util.Set;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "partners")
+@Table(name = "partners", schema = "ERP-BUSSINES-PARTNERS")
 public class Partner {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

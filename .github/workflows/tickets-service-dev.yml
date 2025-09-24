@@ -1,4 +1,4 @@
-name: Deploy Business Partners Service to Dev Environment
+name: Deploy Ticket Partners Service to Dev Environment
 
 on:
   push:
@@ -105,7 +105,7 @@ jobs:
 
       - name: Deploy with Helm
         run: |
-          helm upgrade --install ${{ vars.BUSINESS_PARTNERS_DEPLOY_NAME }} \
+          helm upgrade --install ${{ vars.TICKET_DEPLOY_NAME }} \
             -f ./apps/ticket-service/charts/values-dev.yaml \
             ./apps/ticket-service/charts/ \
             --namespace ${{ vars.NAMESPACE }} \

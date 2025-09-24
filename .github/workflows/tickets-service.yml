@@ -1,18 +1,18 @@
-name: Deploy Business Partners Service to Dev Environment
+name: Deploy TICKET Partners Service to Prod Environment
 
 on:
   push:
-    branches: ['develop']
+    branches: ['main']
     paths:
       - 'apps/ticket-service/**'
       - 'commons/generic-data/**'
 
 concurrency:
-  group: ticket-service-deploy-dev-one21
+  group: ticket-service-deploy-one21
   cancel-in-progress: true
 
 env:
-  IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/dev-ticket-service
+  IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/ticket-service
   IMAGE_TAG: ${{ github.run_number }}
 
 jobs:
@@ -52,7 +52,7 @@ jobs:
     name: Build & Push Docker Image with Jib
     runs-on: ubuntu-latest
     needs: build
-    environment: DEV-ONE21
+    environment: ONE21
 
     steps:
       - uses: actions/checkout@v4
@@ -83,7 +83,7 @@ jobs:
     name: Deploy to Kubernetes
     runs-on: ubuntu-latest
     needs: docker-build
-    environment: DEV-ONE21
+    environment: ONE21
 
     steps:
       - uses: actions/checkout@v4
@@ -105,8 +105,8 @@ jobs:
 
       - name: Deploy with Helm
         run: |
-          helm upgrade --install ${{ vars.BUSINESS_PARTNERS_DEPLOY_NAME }} \
-            -f ./apps/ticket-service/charts/values-dev.yaml \
+          helm upgrade --install ${{ vars.TICKET_DEPLOY_NAME }} \
+            -f ./apps/ticket-service/charts/values.yaml \
             ./apps/ticket-service/charts/ \
             --namespace ${{ vars.NAMESPACE }} \
             --create-namespace \

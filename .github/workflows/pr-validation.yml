@@ -40,6 +40,9 @@ jobs:
             # apps/notification-service:
             #   - 'apps/notification-service/**'
             #   - 'commons/generic-data/**'
+            apps/ticket-service:
+                - 'apps/ticket-service/**'
+                - 'commons/generic-data/**'
 
   test-build:
     needs: detect-changes

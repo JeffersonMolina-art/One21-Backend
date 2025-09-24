@@ -8,7 +8,7 @@ namespace: dev-one21
 containerPort: 8080
 
 image:
-  repository: seminariojalapa/ticket-service
+  repository: seminariojalapa/dev-ticket-service
   tag: '1'
   pullPolicy: Always
 

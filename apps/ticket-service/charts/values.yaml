@@ -1,15 +1,15 @@
-# Default values for business-partners-service.
+# Default values for ticket-service.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 replicaCount: 1
 
 namespace: one21
 
-containerPort: 8082
+containerPort: 8080
 
 image:
-  repository: seminariojalapa/business-partners-service
-  tag: '0.0.5-SNAPSHOT-20250820.065620'
+  repository: seminariojalapa/ticket-service
+  tag: '1'
   pullPolicy: Always
 
 imagePullSecrets: []
@@ -23,7 +23,7 @@ podSecurityContext: {}
 service:
   annotations: {}
   type: ClusterIP
-  port: 9000
+  port: 9002
 
 resources:
   # We usually recommend not to specify default resources and to leave this as a conscious
@@ -46,10 +46,10 @@ autoscaling:
 
 livenessProbe:
   tcpSocket:
-    port: 8082
+    port: 8080
 readinessProbe:
   tcpSocket:
-    port: 8082
+    port: 8080
   periodSeconds: 5
   timeoutSeconds: 5
   failureThreshold: 1
@@ -57,12 +57,12 @@ readinessProbe:
   initialDelaySeconds: 3
 startupProbe:
   tcpSocket:
-    port: 8082
+    port: 8080
   periodSeconds: 10
-  timeoutSeconds: 3
+  timeoutSeconds: 10
   failureThreshold: 30
   successThreshold: 1
-  initialDelaySeconds: 5
+  initialDelaySeconds: 20
 
 nodeSelector: {}
 
@@ -74,7 +74,7 @@ topologySpreadConstraints:
     whenUnsatisfiable: ScheduleAnyway
     labelSelector:
       matchLabels:
-        app.kubernetes.io/name: business-partners-service
+        app.kubernetes.io/name: ticket-service
 
 affinity:
   podAntiAffinity:
@@ -84,7 +84,7 @@ affinity:
         topologyKey: kubernetes.io/hostname
         labelSelector:
           matchLabels:
-            app.kubernetes.io/name: business-partners-service
+            app.kubernetes.io/name: ticket-service
 
 securityContext:
   seccompProfile:
@@ -110,7 +110,7 @@ securityContext:
 
 envVars:
   - name: SPRING_APPLICATION_NAME
-    value: "business-partners-service"
+    value: "ticket-service"
   - name: SPRING_JPA_HIBERNATE_DDL_AUTO
     value: "none"
   - name: SPRING_JPA_DATABASE_PLATFORM
@@ -159,7 +159,7 @@ dragonflycache:
 
   auth:
     enabled: false             
-    secretName: business-partners-service-dragonfly-secret
+    secretName: ticket-service-dragonfly-secret
     secretKey: password
     autoCreate: false
     password: ""               

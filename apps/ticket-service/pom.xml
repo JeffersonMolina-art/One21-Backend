@@ -100,7 +100,7 @@
                         <image>${docker.image.prefix}/${project.artifactId}:${project.version}-${maven.build.timestamp}</image>
                     </to>
                     <container>
-                        <mainClass>gt.edu.umg.ticket.service.TicketServiceApplicationn</mainClass>
+                        <mainClass>gt.edu.umg.ticket.service.TicketServiceApplication</mainClass>
                     </container>
                 </configuration>
             </plugin>

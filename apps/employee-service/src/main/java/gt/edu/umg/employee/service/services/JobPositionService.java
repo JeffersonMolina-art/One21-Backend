@@ -11,13 +11,14 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 public class JobPositionService extends GenericServiceImpl<JobPositionDto, JobPosition, Integer> {
+
     private final JobPositionRepository jobPositionRepository;
     private final GenericMapper mapper;
 
-    public JobPositionService(JobPositionRepository jobPositionRepository, GenericMapper mapper) {
+    public JobPositionService(JobPositionRepository jobPositionRepository, GenericMapper mapper){
         super(jobPositionRepository, mapper, JobPositionDto.class, JobPosition.class);
         this.jobPositionRepository = jobPositionRepository;
         this.mapper = mapper;
     }
-}
 
+}

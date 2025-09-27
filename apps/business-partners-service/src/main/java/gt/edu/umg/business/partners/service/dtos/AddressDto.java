@@ -1,6 +1,10 @@
 package gt.edu.umg.business.partners.service.dtos;
 
-import lombok.Value;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.time.Instant;
@@ -8,20 +12,27 @@ import java.time.Instant;
 /**
  * DTO for {@link gt.edu.umg.business.partners.service.entities.Address}
  */
-@Value
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class AddressDto implements Serializable {
     Integer id;
+    @NotNull
     PartnerDto businessPartner;
     String addressType;
+    @NotNull
+    @Size(max = 200)
     String street;
+    @Size(max = 200)
     String street2;
+    @Size(max = 100)
     String neighborhood;
+    @Size(max = 10)
     String postalCode;
-    CityDto city;
-    StateDto state;
-    CountryDto country;
     Boolean isDefault;
     Boolean isActive;
     Instant createdAt;
     Instant updatedAt;
+    @NotNull
+    MunicipalityDto municipality;
 }

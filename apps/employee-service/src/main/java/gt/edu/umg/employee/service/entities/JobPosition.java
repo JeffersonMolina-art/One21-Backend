@@ -3,19 +3,12 @@ package gt.edu.umg.employee.service.entities;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.ColumnDefault;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
 
-import java.math.BigDecimal;
 import java.time.Instant;
 
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
 @Entity
@@ -31,37 +24,19 @@ public class JobPosition {
     @Column(name = "code", nullable = false, length = 20)
     private String code;
 
-    @Size(max = 100)
+    @Size(max = 120)
     @NotNull
-    @Column(name = "title", nullable = false, length = 100)
-    private String title;
+    @Column(name = "name", nullable = false, length = 120)
+    private String name;
 
-    @Lob
+    @Size(max = 255)
     @Column(name = "description")
     private String description;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @OnDelete(action = OnDeleteAction.SET_NULL)
-    @JoinColumn(name = "department_id")
-    private Department department;
-
-    @Size(max = 20)
-    @Column(name = "level", length = 20)
-    private String level;
-
-    @Column(name = "min_salary", precision = 12, scale = 2)
-    private BigDecimal minSalary;
-
-    @Column(name = "max_salary", precision = 12, scale = 2)
-    private BigDecimal maxSalary;
-
-    @ColumnDefault("0")
-    @Column(name = "requires_degree")
-    private Boolean requiresDegree;
-
+    @NotNull
     @ColumnDefault("1")
-    @Column(name = "is_active")
-    private Boolean isActive;
+    @Column(name = "is_active", nullable = false)
+    private Boolean isActive = false;
 
     @ColumnDefault("CURRENT_TIMESTAMP")
     @Column(name = "created_at")

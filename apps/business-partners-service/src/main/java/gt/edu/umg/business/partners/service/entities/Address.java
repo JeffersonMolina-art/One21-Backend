@@ -1,6 +1,8 @@
 package gt.edu.umg.business.partners.service.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.ColumnDefault;
@@ -17,37 +19,32 @@ public class Address {
     @Column(name = "id", nullable = false)
     private Integer id;
 
+    @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "business_partner_id", nullable = false)
     private Partner businessPartner;
 
     @ColumnDefault("'BILLING'")
+    @Lob
     @Column(name = "address_type")
     private String addressType;
 
+    @Size(max = 200)
+    @NotNull
     @Column(name = "street", nullable = false, length = 200)
     private String street;
 
+    @Size(max = 200)
     @Column(name = "street2", length = 200)
     private String street2;
 
+    @Size(max = 100)
     @Column(name = "neighborhood", length = 100)
     private String neighborhood;
 
+    @Size(max = 10)
     @Column(name = "postal_code", length = 10)
     private String postalCode;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "city_id")
-    private City city;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "state_id")
-    private State state;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "country_id", nullable = false)
-    private Country country;
 
     @ColumnDefault("0")
     @Column(name = "is_default")
@@ -64,4 +61,10 @@ public class Address {
     @ColumnDefault("CURRENT_TIMESTAMP")
     @Column(name = "updated_at")
     private Instant updatedAt;
+
+    @NotNull
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "municipalities_id", nullable = false)
+    private Municipality municipality;
+
 }

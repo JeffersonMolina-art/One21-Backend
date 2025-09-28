@@ -8,13 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("employee/employees")
-public class EmployeeController extends GenericController<EmployeeDto, Employee, Integer> {
-    private final EmployeeService employeeService;
+@RequestMapping("employees")
+public class EmployeeController extends GenericController <EmployeeDto, Employee, Integer>{
 
-    public EmployeeController(EmployeeService employeeService) {
-        super(employeeService);
-        this.employeeService = employeeService;
-    }
+    public EmployeeController(EmployeeService employeeService) {super(employeeService);}
 }
-

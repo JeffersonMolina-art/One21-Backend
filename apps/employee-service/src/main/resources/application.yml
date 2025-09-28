@@ -15,4 +15,5 @@ spring:
     database-platform: org.hibernate.dialect.MySQL8Dialect
     properties:
       hibernate:
+        default_catalog: erp_employees
         format_sql: true

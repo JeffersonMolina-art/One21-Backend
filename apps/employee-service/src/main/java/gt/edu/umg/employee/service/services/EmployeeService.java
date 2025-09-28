@@ -11,13 +11,13 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 public class EmployeeService extends GenericServiceImpl<EmployeeDto, Employee, Integer> {
+
     private final EmployeeRepository employeeRepository;
     private final GenericMapper mapper;
 
-    public EmployeeService(EmployeeRepository employeeRepository, GenericMapper mapper) {
+    public EmployeeService(EmployeeRepository employeeRepository, GenericMapper mapper){
         super(employeeRepository, mapper, EmployeeDto.class, Employee.class);
         this.employeeRepository = employeeRepository;
         this.mapper = mapper;
     }
 }
-

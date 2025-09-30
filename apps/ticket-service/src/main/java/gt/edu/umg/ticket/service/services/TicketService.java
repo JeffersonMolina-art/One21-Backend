@@ -8,6 +8,8 @@ import gt.edu.umg.ticket.service.repositories.TicketRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Slf4j
 @Service
 public class TicketService extends GenericServiceImpl<TicketDto, Ticket, Integer> {
@@ -18,5 +20,10 @@ public class TicketService extends GenericServiceImpl<TicketDto, Ticket, Integer
         super(ticketRepository, mapper, TicketDto.class, Ticket.class);
         this.ticketRepository = ticketRepository;
         this.mapper = mapper;
+    }
+
+    public List<TicketDto> findByStatus(Integer statusId) {
+        List<Ticket> tickets = ticketRepository.findByStatus_Id(statusId);
+        return mapper.toDtoList(tickets , TicketDto.class);
     }
 }

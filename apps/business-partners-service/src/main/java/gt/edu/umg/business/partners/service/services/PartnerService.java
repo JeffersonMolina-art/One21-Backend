@@ -7,6 +7,8 @@ import gt.edu.umg.generic.data.services.GenericServiceImpl;
 import gt.edu.umg.generic.data.utils.GenericMapper;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PartnerService extends GenericServiceImpl<PartnerDto, Partner, Integer> {
 
@@ -17,5 +19,10 @@ public class PartnerService extends GenericServiceImpl<PartnerDto, Partner, Inte
         super(partnerRepository, mapper, PartnerDto.class, Partner.class);
         this.partnerRepository = partnerRepository;
         this.mapper = mapper;
+    }
+
+    public List<PartnerDto> findByEmail(String email) {
+        List<Partner> partners = partnerRepository.findPartnerByEmail(email);
+        return mapper.toDtoList(partners , PartnerDto.class);
     }
 }

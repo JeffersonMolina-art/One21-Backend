@@ -36,4 +36,8 @@ public class Municipality {
     @Column(name = "updated_at")
     private Instant updatedAt;
 
+    @NotNull
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "departments_id", nullable = false)
+    private  Department department;
 }

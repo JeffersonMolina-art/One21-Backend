@@ -7,8 +7,12 @@ import gt.edu.umg.business.partners.service.entities.Partner;
 import gt.edu.umg.business.partners.service.services.MunicipalityService;
 import gt.edu.umg.generic.data.controllers.GenericController;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @Slf4j
 @RestController
@@ -20,5 +24,10 @@ public class MunicipalityController  extends GenericController<MunicipalityDto, 
     public MunicipalityController(MunicipalityService municipalityService) {
         super(municipalityService);
         this.municipalityService = municipalityService;
+    }
+
+    @GetMapping("/by-department")
+    public List<MunicipalityDto> findByDepartment(@RequestParam Integer id) {
+        return municipalityService.findByMunicipalitiesForDeoarment(id);
     }
 }

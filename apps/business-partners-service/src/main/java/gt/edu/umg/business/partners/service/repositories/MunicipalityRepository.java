@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface MunicipalityRepository extends JpaRepository<Municipality, Integer> {
 
-    List<Municipality> findMunicipalitiesByDepartment_Id(Integer departmentId);
+    List<Municipality> findMunicipalitiesByDepartments_Id(Integer departmentId);
 }

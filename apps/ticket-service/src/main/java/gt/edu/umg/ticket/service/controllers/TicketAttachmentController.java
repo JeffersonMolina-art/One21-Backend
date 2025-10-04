@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("ticket/attachments")
+@RequestMapping("attachments")
 public class TicketAttachmentController extends GenericController<TicketAttachmentDto, TicketAttachment, Integer> {
     public  TicketAttachmentController(TicketAttachmentService ticketAttachmentService) {
         super(ticketAttachmentService);

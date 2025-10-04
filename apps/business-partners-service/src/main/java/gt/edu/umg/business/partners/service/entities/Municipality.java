@@ -38,6 +38,6 @@ public class Municipality {
 
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "department_id", nullable = false)
-    private  Department department;
+    @JoinColumn(name = "departments_id", nullable = false)
+    private  Department departments;
 }

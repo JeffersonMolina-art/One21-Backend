@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("ticket/actions")
+@RequestMapping("actions")
 public class TicketActionController extends GenericController<TicketActionDto, TicketAction, Integer> {
     public TicketActionController(TicketActionService ticketActionService) {
         super(ticketActionService);

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("customers/price-lists")
+@RequestMapping("price-lists")
 public class PriceListController extends GenericController<PriceListDto, PriceList, Integer> {
 
     public PriceListController(PriceListService priceListService) {super(priceListService);}

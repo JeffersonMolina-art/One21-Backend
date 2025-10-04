@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("customers/payment-terms")
+@RequestMapping("payment-terms")
 public class PaymentTermController extends GenericController<PaymentTermDto, PaymentTerm, Integer> {
 
     public PaymentTermController(PaymentTermService paymentTermService) {super(paymentTermService);}

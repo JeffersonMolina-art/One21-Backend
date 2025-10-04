@@ -22,7 +22,7 @@ public class MunicipalityService extends GenericServiceImpl<MunicipalityDto, Mun
     }
 
     public List<MunicipalityDto> findByMunicipalitiesForDeoarment(Integer id) {
-        List<Municipality> municipalities = municipalityRepository.findMunicipalitiesByDepartment_Id(id);
+        List<Municipality> municipalities = municipalityRepository.findMunicipalitiesByDepartments_Id(id);
         return mapper.toDtoList(municipalities , MunicipalityDto.class);
     }
 }

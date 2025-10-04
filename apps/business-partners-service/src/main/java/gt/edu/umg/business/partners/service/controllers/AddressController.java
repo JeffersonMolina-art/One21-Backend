@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("partners/addresses")
+@RequestMapping("addresses")
 public class AddressController extends GenericController<AddressDto, Address, Integer> {
 
     private AddressService addressService;

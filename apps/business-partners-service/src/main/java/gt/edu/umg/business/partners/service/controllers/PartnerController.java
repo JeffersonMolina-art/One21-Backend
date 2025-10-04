@@ -12,7 +12,7 @@ import java.util.List;
 
 @Slf4j
 @RestController
-@RequestMapping("partners/partners")
+@RequestMapping("partners")
 public class PartnerController extends GenericController<PartnerDto, Partner, Integer> {
 
     private PartnerService partnerService;

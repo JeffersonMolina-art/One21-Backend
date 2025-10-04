@@ -13,7 +13,7 @@ import java.util.List;
 
 @Slf4j
 @RestController
-@RequestMapping("partners/municipalities")
+@RequestMapping("municipalities")
 public class MunicipalityController  extends GenericController<MunicipalityDto, Municipality, Integer> {
 
     private final MunicipalityService municipalityService;

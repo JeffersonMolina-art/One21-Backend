@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("employees/job-position")
+@RequestMapping("job-position")
 public class JobPosistionController extends GenericController<JobPositionDto, JobPosition, Integer> {
 
     public JobPosistionController(JobPositionService jobPositionService) {super(jobPositionService);}

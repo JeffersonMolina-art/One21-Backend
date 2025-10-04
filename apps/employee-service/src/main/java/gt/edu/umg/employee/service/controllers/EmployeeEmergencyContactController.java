@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("employees/emergency-contacts")
+@RequestMapping("emergency-contacts")
 public class EmployeeEmergencyContactController extends GenericController<EmployeeEmergencyContactDto, EmployeeEmergencyContact, Integer> {
 
     public EmployeeEmergencyContactController(EmployeeEmergencyContractService employeeEmergencyContractService) {super(employeeEmergencyContractService);}

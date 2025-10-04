@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("customers/groups")
+@RequestMapping("groups")
 public class CustomerGroupController extends GenericController<CustomerGroupDto, CustomerGroup, Integer> {
 
     public CustomerGroupController(CustomerGroupService customerGroupService) {super(customerGroupService);}

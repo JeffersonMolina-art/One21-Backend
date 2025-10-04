@@ -11,7 +11,7 @@ import java.util.List;
 
 @Slf4j
 @RestController
-@RequestMapping("partners/departments")
+@RequestMapping("departments")
 public class DepartmentController extends GenericController<DepartmentDto, Department, Integer> {
 
     private DepartmentService departmentService;

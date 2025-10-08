@@ -99,11 +99,10 @@ public class EmployeeController extends GenericController<EmployeeDto, Employee,
         }
     }
 
-    @GetMapping("/by-business-partner")
-    public ResponseEntity<Employee> getByBusinessPartnerId(@RequestParam Integer businessPartnerId) {
-
+    @GetMapping("/by-business-partner/{id}")
+    public ResponseEntity<EmployeeDto> getByBusinessPartnerId(@PathVariable Integer id) {
         try {
-            Employee employee = employeeService.findByBusinessPartnerId(businessPartnerId);
+            EmployeeDto employee = employeeService.findByBusinessPartnerId(id);
             if (employee == null) {
                 return ResponseEntity.notFound().build();
             }
@@ -111,8 +110,8 @@ public class EmployeeController extends GenericController<EmployeeDto, Employee,
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(null);
-
         }
     }
+
 }
 

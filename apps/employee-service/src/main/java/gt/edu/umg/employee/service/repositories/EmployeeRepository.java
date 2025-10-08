@@ -34,6 +34,6 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
     """)
     List<EmployeeDto> findAllFlat();
 
-    Employee findByBusinessPartnerId(Integer businessPartnerId);
+    Employee findEmployeeByBusinessPartnerId(Integer businessPartnerId);
 
 }

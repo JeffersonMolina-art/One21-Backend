@@ -28,7 +28,7 @@ public class EmployeeService extends GenericServiceImpl<EmployeeDto, Employee, I
     }
 
     public Employee findByBusinessPartnerId(Integer businessPartnerId) {
-        return employeeRepository.findByBusinessPartnerId(businessPartnerId);
+        return employeeRepository.findEmployeeByBusinessPartnerId(businessPartnerId);
     }
 }
 

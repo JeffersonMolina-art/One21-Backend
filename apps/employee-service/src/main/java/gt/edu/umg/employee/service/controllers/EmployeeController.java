@@ -98,5 +98,14 @@ public class EmployeeController extends GenericController<EmployeeDto, Employee,
                     ));
         }
     }
+
+    @GetMapping("/by-business-partner")
+    public ResponseEntity<Employee> getByBusinessPartnerId(@RequestParam Integer businessPartnerId) {
+        Employee employee = employeeService.findByBusinessPartnerId(businessPartnerId);
+        if (employee == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(employee);
+    }
 }
 

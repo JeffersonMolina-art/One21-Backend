@@ -33,4 +33,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
         order by e.id
     """)
     List<EmployeeDto> findAllFlat();
+
+    Employee findEmployeeByBusinessPartnerId(Integer businessPartnerId);
+
 }

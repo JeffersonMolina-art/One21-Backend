@@ -18,4 +18,6 @@ public interface TicketRepository extends JpaRepository<Ticket, Integer> {
 
     List<Ticket> findByAssignedToEmployeeIdAndStatus_Id(Integer employeeId, Integer status);
 
+    List<Ticket> findByAssignedToEmployeeId(Integer employeeId);
+
 }

@@ -33,6 +33,10 @@ public class TicketController extends GenericController<TicketDto, Ticket, Integ
     public List<TicketDto> findByPartnerId(Integer id) {
         return ticketService.findByPartnertId(id);
     }
+    @GetMapping("/by-employee-assigned/{id}")
+    public List<TicketDto> findByEmployeeId(Integer id) {
+        return ticketService.findByEmployeeAssignedId(id);
+    }
 
     @GetMapping("/by-partner/{partnerId}/status/{status}")
     public  List<TicketDto> findByPartnerIdAndStatus(@PathVariable Integer partnerId, @PathVariable Integer status) {

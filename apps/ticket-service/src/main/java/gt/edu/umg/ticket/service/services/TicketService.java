@@ -43,5 +43,10 @@ public class TicketService extends GenericServiceImpl<TicketDto, Ticket, Integer
         return mapper.toDtoList(tickets , TicketDto.class);
     }
 
+    public List<TicketDto> findByEmployeeAssignedId(Integer id) {
+        List<Ticket> tickets = ticketRepository.findByAssignedToEmployeeId(id);
+        return mapper.toDtoList(tickets , TicketDto.class);
+    }
+
 
 }

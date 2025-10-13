@@ -43,6 +43,9 @@ jobs:
             apps/ticket-service:
                 - 'apps/ticket-service/**'
                 - 'commons/generic-data/**'
+            apps/customer-service:
+                - 'apps/customer-service/**'
+                - 'commons/generic-data/**'
 
   test-build:
     needs: detect-changes

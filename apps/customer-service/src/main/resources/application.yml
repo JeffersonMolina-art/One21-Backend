@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: employee-service
+  datasource:
+    url: jdbc:mysql://mysql:3306/erp_customers?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    # url: jdbc:mysql://192.168.1.72:33307/control-informacion?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: Sincal200
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    properties:
+      hibernate:
+        default_catalog: erp_customers
+        format_sql: true
+server:
+  port: 8086

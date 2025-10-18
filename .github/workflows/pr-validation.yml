@@ -1,0 +1,56 @@
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
+
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: PR Validation
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - main
+  merge_group:
+    types: [checks_requested]
+
+jobs:
+  detect-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      changed-modules: ${{ steps.filter.outputs.changes }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect changed modules
+        id: filter
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            apps/business-partners-service:
+              - 'apps/business-partners-service/**'
+              - 'commons/generic-data/**'
+            apps/employee-service:
+              - 'apps/employee-service/**'
+              - 'commons/generic-data/**'
+            # apps/notification-service:
+            #   - 'apps/notification-service/**'
+            #   - 'commons/generic-data/**'
+            apps/ticket-service:
+                - 'apps/ticket-service/**'
+                - 'commons/generic-data/**'
+            apps/customer-service:
+                - 'apps/customer-service/**'
+                - 'commons/generic-data/**'
+
+  test-build:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.changed-modules != '[]'
+    uses: ./.github/workflows/test-build.yml
+    with:
+      environment: pr-${{ github.event.number || 'merge-queue' }}
+      modules: ${{ needs.detect-changes.outputs.changed-modules }}

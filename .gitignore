@@ -1,0 +1,11 @@
+# Ignorar carpeta de compilación de Maven
+target/
+
+# Archivos de configuración de IDEs
+*.iml
+.idea/
+*.class
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db

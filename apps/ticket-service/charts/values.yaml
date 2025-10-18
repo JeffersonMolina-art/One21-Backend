@@ -1,0 +1,165 @@
+# Default values for ticket-service.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+replicaCount: 1
+
+namespace: one21
+
+containerPort: 8080
+
+image:
+  repository: seminariojalapa/ticket-service
+  tag: '1'
+  pullPolicy: Always
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+
+service:
+  annotations: {}
+  type: ClusterIP
+  port: 9002
+
+resources:
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  limits:
+    cpu: "500m"
+    memory: "600Mi"
+  requests:
+    cpu: "100m"
+    memory: "450Mi"
+
+autoscaling:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 3
+  targetCPUUtilizationPercentage: 70
+  # targetMemoryUtilizationPercentage: 80
+
+livenessProbe:
+  tcpSocket:
+    port: 8080
+readinessProbe:
+  tcpSocket:
+    port: 8080
+  periodSeconds: 5
+  timeoutSeconds: 5
+  failureThreshold: 1
+  successThreshold: 1
+  initialDelaySeconds: 3
+startupProbe:
+  tcpSocket:
+    port: 8080
+  periodSeconds: 10
+  timeoutSeconds: 10
+  failureThreshold: 30
+  successThreshold: 1
+  initialDelaySeconds: 10
+
+nodeSelector: {}
+
+tolerations: []
+
+topologySpreadConstraints:
+  - maxSkew: 1
+    topologyKey: kubernetes.io/hostname
+    whenUnsatisfiable: ScheduleAnyway
+    labelSelector:
+      matchLabels:
+        app.kubernetes.io/name: ticket-service
+
+affinity:
+  podAntiAffinity:
+    preferredDuringSchedulingIgnoredDuringExecution:
+    - weight: 100
+      podAffinityTerm:
+        topologyKey: kubernetes.io/hostname
+        labelSelector:
+          matchLabels:
+            app.kubernetes.io/name: ticket-service
+
+securityContext:
+  seccompProfile:
+    type: RuntimeDefault
+  capabilities:
+    drop:
+      - ALL
+    add:
+      - SETPCAP
+      - MKNOD
+      - AUDIT_WRITE
+      - CHOWN
+      - DAC_OVERRIDE
+      - FOWNER
+      - FSETID
+      - KILL
+      - SETGID
+      - SETUID
+      - NET_BIND_SERVICE
+      - SYS_CHROOT
+      - SETFCAP
+      - SYS_PTRACE
+
+envVars:
+  - name: SPRING_APPLICATION_NAME
+    value: "ticket-service"
+  - name: SPRING_JPA_HIBERNATE_DDL_AUTO
+    value: "none"
+  - name: SPRING_JPA_DATABASE_PLATFORM
+    value: "org.hibernate.dialect.MySQL8Dialect"
+
+generatorLabel: draft
+
+# Dragonfly Cache Configuration
+dragonflycache:
+  replicaCount: 1
+
+  image:
+    repository: docker.dragonflydb.io/dragonflydb/dragonfly
+    tag: latest
+    pullPolicy: IfNotPresent
+
+  containerPort: 6379
+
+  resources:
+    requests:
+      cpu: "30m"
+      memory: "256Mi"
+
+  livenessProbe:
+    tcpSocket:
+      port: 6379
+    initialDelaySeconds: 10
+    periodSeconds: 10
+
+  readinessProbe:
+    tcpSocket:
+      port: 6379
+    initialDelaySeconds: 3
+    periodSeconds: 5
+
+  startupProbe: {}
+
+  persistence:
+    enabled: true
+    size: 1Gi
+    storageClass: ""
+
+  service:
+    type: ClusterIP
+    port: 6379
+
+  auth:
+    enabled: false             
+    secretName: ticket-service-dragonfly-secret
+    secretKey: password
+    autoCreate: false
+    password: ""               

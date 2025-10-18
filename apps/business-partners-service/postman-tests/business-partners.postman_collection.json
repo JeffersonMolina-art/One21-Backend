@@ -1,0 +1,908 @@
+{
+	"info": {
+		"_postman_id": "fd80f70f-817f-493f-8f09-6f25371e2984",
+		"name": "Prubcollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45252071",
+		"_collection_link": "https://jesus-6203406.postman.co/workspace/Prueb~acb05e5a-7c69-4e89-ba91-21b7bde3e30a/collection/45252071-fd80f70f-817f-493f-8f09-6f25371e2984?action=share&source=collection_link&creator=45252071"
+	},
+	"item": [
+		{
+			"name": "crear token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "yqxzLMZmlMU2nlBXWwwgrqIusKp9bH5u",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"test@test.com\",\r\n  \"password\": \"Sincal200\",\r\n  \"tenant\": \"one21\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev.one21.app/auth/login",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"one21",
+						"app"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verificar token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJudTFHNy1WTjR0MVlTVDQ1by1pNk4tZ3dRcl9XZ1JlTGVldjZLdmRadVVnIn0.eyJleHAiOjE3NTY1NTM2MzIsImlhdCI6MTc1NjU1MTgzMiwianRpIjoiNTQxZTFhMzctNzUwYy00OGEzLTgzNDUtNGVmY2U0ZmNiN2UwIiwiaXNzIjoiaHR0cHM6Ly9kZXYta2V5Y2xvYWsub25lMjEuYXBwL3JlYWxtcy9PbmUyMSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI1YjYxN2VlMS0yYzg2LTRmN2QtYWM3NC00MmVjMjZhNWMxZjEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJvbmUyMSIsInNlc3Npb25fc3RhdGUiOiIzN2FmNmZiNy02ZThkLTRhMzMtOTdkNy1lNDU0NTBjNTliMDciLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vb25lMjEuYXBwIiwiaHR0cHM6Ly9kZXYub25lMjEuYXBwIiwiaHR0cDovL2xvY2FsaG9zdDozMDAxIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLW9uZTIxIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjM3YWY2ZmI3LTZlOGQtNGEzMy05N2Q3LWU0NTQ1MGM1OWIwNyIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidGVzdCB0ZXN0IiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGVzdEB0ZXN0LmNvbSIsImdpdmVuX25hbWUiOiJ0ZXN0IiwiZmFtaWx5X25hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.sFFSqUcVObKth333Bsisop6BZfxngnjmCFXbGyJmTJa3AYo2JBId73YBtWgXO1kZ9e0F0IP19uuzKjInx6xyJRhtYOOlFkYWfcexjsKRyWGC5dx4bKW0FNbwjLTw65KmzixuoOQZX_F98tk8F75Hp3Niz5zzmAhPXpRLi8NHYKDR1Tg1PToQBLgCFPU6_FqWQNvKP9EtPL1sFvljKf0-fJldrIxLSzOvVYLk2oelv4j1kCiNHXEucWZL45x6US43neRVsk9yX8c7kvtPfFxWc6rgzof5Ml9tCiaUBVbic_j_BXDxCjA-8zd_U8mLJWKFmB00MUBDnJENd-ZSfzKAKA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev.one21.app/auth/verifyToken",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"one21",
+						"app"
+					],
+					"path": [
+						"auth",
+						"verifyToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Partners - bank-accounts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJudTFHNy1WTjR0MVlTVDQ1by1pNk4tZ3dRcl9XZ1JlTGVldjZLdmRadVVnIn0.eyJleHAiOjE3NTc3ODA0NTgsImlhdCI6MTc1Nzc3ODY1OCwianRpIjoiNjdmYjNiM2YtM2UxMC00ZWFlLWFiMmUtNTI5M2I1MjJkN2MwIiwiaXNzIjoiaHR0cHM6Ly9kZXYta2V5Y2xvYWsub25lMjEuYXBwL3JlYWxtcy9PbmUyMSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI1YjYxN2VlMS0yYzg2LTRmN2QtYWM3NC00MmVjMjZhNWMxZjEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJvbmUyMSIsInNlc3Npb25fc3RhdGUiOiIyOWVhYmU5YS1hMDhlLTQ3MTYtYWUyNC05YmUyMDc5NTIxZDEiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vb25lMjEuYXBwIiwiaHR0cHM6Ly9kZXYub25lMjEuYXBwIiwiaHR0cDovL2xvY2FsaG9zdDozMDAxIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLW9uZTIxIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjI5ZWFiZTlhLWEwOGUtNDcxNi1hZTI0LTliZTIwNzk1MjFkMSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidGVzdCB0ZXN0IiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGVzdEB0ZXN0LmNvbSIsImdpdmVuX25hbWUiOiJ0ZXN0IiwiZmFtaWx5X25hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.j1ovaPKUw8e3ZuISEFW3Eaj2XiS_9TtkM6HPaJmhr61L5UvRWVadfMhKV7hsB54w1L5wNwKQxNnG4QbLAD9kf5r1r4rjc09W3kKvC78U3RsxjCQE0BU4E6eMjfdrjPQ4Q1sAVcxO5WhgnEtX2QG4mUvCPGrCWXlq2qG3tguPb_JPgcV9I8nj1Fn__J7xAFUKPwiPmIAbjmU6xTNYFqEZad4R6HevMR3pOKF8-ex9F98V7zDVSE5MkkQBwf_n1RVrTEu_15gh1B0llTxW88fOJxCYBGk7PIW2aEeuo6gn4DNzzvwtLf0tA_VScO66LLv-nasw5gqkm-BrUUY3xEP3eA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{accessToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev.one21.app/api/partners/bank-accounts",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"one21",
+						"app"
+					],
+					"path": [
+						"api",
+						"partners",
+						"bank-accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Partners - categories",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJudTFHNy1WTjR0MVlTVDQ1by1pNk4tZ3dRcl9XZ1JlTGVldjZLdmRadVVnIn0.eyJleHAiOjE3NTc3ODA0NTgsImlhdCI6MTc1Nzc3ODY1OCwianRpIjoiNjdmYjNiM2YtM2UxMC00ZWFlLWFiMmUtNTI5M2I1MjJkN2MwIiwiaXNzIjoiaHR0cHM6Ly9kZXYta2V5Y2xvYWsub25lMjEuYXBwL3JlYWxtcy9PbmUyMSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI1YjYxN2VlMS0yYzg2LTRmN2QtYWM3NC00MmVjMjZhNWMxZjEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJvbmUyMSIsInNlc3Npb25fc3RhdGUiOiIyOWVhYmU5YS1hMDhlLTQ3MTYtYWUyNC05YmUyMDc5NTIxZDEiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vb25lMjEuYXBwIiwiaHR0cHM6Ly9kZXYub25lMjEuYXBwIiwiaHR0cDovL2xvY2FsaG9zdDozMDAxIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLW9uZTIxIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjI5ZWFiZTlhLWEwOGUtNDcxNi1hZTI0LTliZTIwNzk1MjFkMSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidGVzdCB0ZXN0IiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGVzdEB0ZXN0LmNvbSIsImdpdmVuX25hbWUiOiJ0ZXN0IiwiZmFtaWx5X25hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.j1ovaPKUw8e3ZuISEFW3Eaj2XiS_9TtkM6HPaJmhr61L5UvRWVadfMhKV7hsB54w1L5wNwKQxNnG4QbLAD9kf5r1r4rjc09W3kKvC78U3RsxjCQE0BU4E6eMjfdrjPQ4Q1sAVcxO5WhgnEtX2QG4mUvCPGrCWXlq2qG3tguPb_JPgcV9I8nj1Fn__J7xAFUKPwiPmIAbjmU6xTNYFqEZad4R6HevMR3pOKF8-ex9F98V7zDVSE5MkkQBwf_n1RVrTEu_15gh1B0llTxW88fOJxCYBGk7PIW2aEeuo6gn4DNzzvwtLf0tA_VScO66LLv-nasw5gqkm-BrUUY3xEP3eA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{accessToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev.one21.app/api/partners/categories",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"one21",
+						"app"
+					],
+					"path": [
+						"api",
+						"partners",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Partners - contacts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJudTFHNy1WTjR0MVlTVDQ1by1pNk4tZ3dRcl9XZ1JlTGVldjZLdmRadVVnIn0.eyJleHAiOjE3NTc3ODA0NTgsImlhdCI6MTc1Nzc3ODY1OCwianRpIjoiNjdmYjNiM2YtM2UxMC00ZWFlLWFiMmUtNTI5M2I1MjJkN2MwIiwiaXNzIjoiaHR0cHM6Ly9kZXYta2V5Y2xvYWsub25lMjEuYXBwL3JlYWxtcy9PbmUyMSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI1YjYxN2VlMS0yYzg2LTRmN2QtYWM3NC00MmVjMjZhNWMxZjEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJvbmUyMSIsInNlc3Npb25fc3RhdGUiOiIyOWVhYmU5YS1hMDhlLTQ3MTYtYWUyNC05YmUyMDc5NTIxZDEiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vb25lMjEuYXBwIiwiaHR0cHM6Ly9kZXYub25lMjEuYXBwIiwiaHR0cDovL2xvY2FsaG9zdDozMDAxIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLW9uZTIxIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjI5ZWFiZTlhLWEwOGUtNDcxNi1hZTI0LTliZTIwNzk1MjFkMSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidGVzdCB0ZXN0IiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGVzdEB0ZXN0LmNvbSIsImdpdmVuX25hbWUiOiJ0ZXN0IiwiZmFtaWx5X25hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.j1ovaPKUw8e3ZuISEFW3Eaj2XiS_9TtkM6HPaJmhr61L5UvRWVadfMhKV7hsB54w1L5wNwKQxNnG4QbLAD9kf5r1r4rjc09W3kKvC78U3RsxjCQE0BU4E6eMjfdrjPQ4Q1sAVcxO5WhgnEtX2QG4mUvCPGrCWXlq2qG3tguPb_JPgcV9I8nj1Fn__J7xAFUKPwiPmIAbjmU6xTNYFqEZad4R6HevMR3pOKF8-ex9F98V7zDVSE5MkkQBwf_n1RVrTEu_15gh1B0llTxW88fOJxCYBGk7PIW2aEeuo6gn4DNzzvwtLf0tA_VScO66LLv-nasw5gqkm-BrUUY3xEP3eA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{accessToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev.one21.app/api/partners/contacts",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"one21",
+						"app"
+					],
+					"path": [
+						"api",
+						"partners",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Partners - partners",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJudTFHNy1WTjR0MVlTVDQ1by1pNk4tZ3dRcl9XZ1JlTGVldjZLdmRadVVnIn0.eyJleHAiOjE3NTc3ODI3NDYsImlhdCI6MTc1Nzc4MDk0NiwianRpIjoiNWY0YjljYzYtNjU5Yi00MWM0LWE4ZWItODc0ZTE4MjIyZDE0IiwiaXNzIjoiaHR0cHM6Ly9kZXYta2V5Y2xvYWsub25lMjEuYXBwL3JlYWxtcy9PbmUyMSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI1YjYxN2VlMS0yYzg2LTRmN2QtYWM3NC00MmVjMjZhNWMxZjEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJvbmUyMSIsInNlc3Npb25fc3RhdGUiOiIzNWYwOGM1NS0yNjY5LTQxOWYtYjc0Zi03MzA0ODMyN2EzNTQiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vb25lMjEuYXBwIiwiaHR0cHM6Ly9kZXYub25lMjEuYXBwIiwiaHR0cDovL2xvY2FsaG9zdDozMDAxIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLW9uZTIxIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjM1ZjA4YzU1LTI2NjktNDE5Zi1iNzRmLTczMDQ4MzI3YTM1NCIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidGVzdCB0ZXN0IiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGVzdEB0ZXN0LmNvbSIsImdpdmVuX25hbWUiOiJ0ZXN0IiwiZmFtaWx5X25hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.nblpLFlOe5BOBdoFBuTQIcBPPgZgk2EpO29oJU0VeFE9obN9rTEPxOTPr1DeeJdPJ6EbalDocm83XesoS7cbT0YTG2q5X1garsxd_fsCqWRvwnvf4C5GPO-YBIocyN886ca9T5XFV-4L45b6aLuFWZLEY2OslIXi2Ff-zza4ST-HsIzWA5ppr2kKc7VvXRe0gIdQMJymlvp8EfkQd3NN9Xa-14hZRw3fbjxfddqZ4yyVOgMCj7vdw4ZpEnxzniXc8JHpstrJKrxwR-KKyw9KYQVVH94aPktmlvUOOv15Ti7SHQOw2fQyv_S0DhzxqCZMRpc7k_xjRYwVyqljf0gqjA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{accessToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev.one21.app/api/partners/partners",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"one21",
+						"app"
+					],
+					"path": [
+						"api",
+						"partners",
+						"partners"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Partners - departments",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJudTFHNy1WTjR0MVlTVDQ1by1pNk4tZ3dRcl9XZ1JlTGVldjZLdmRadVVnIn0.eyJleHAiOjE3NTc3ODI3NDYsImlhdCI6MTc1Nzc4MDk0NiwianRpIjoiNWY0YjljYzYtNjU5Yi00MWM0LWE4ZWItODc0ZTE4MjIyZDE0IiwiaXNzIjoiaHR0cHM6Ly9kZXYta2V5Y2xvYWsub25lMjEuYXBwL3JlYWxtcy9PbmUyMSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI1YjYxN2VlMS0yYzg2LTRmN2QtYWM3NC00MmVjMjZhNWMxZjEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJvbmUyMSIsInNlc3Npb25fc3RhdGUiOiIzNWYwOGM1NS0yNjY5LTQxOWYtYjc0Zi03MzA0ODMyN2EzNTQiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vb25lMjEuYXBwIiwiaHR0cHM6Ly9kZXYub25lMjEuYXBwIiwiaHR0cDovL2xvY2FsaG9zdDozMDAxIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLW9uZTIxIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjM1ZjA4YzU1LTI2NjktNDE5Zi1iNzRmLTczMDQ4MzI3YTM1NCIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidGVzdCB0ZXN0IiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGVzdEB0ZXN0LmNvbSIsImdpdmVuX25hbWUiOiJ0ZXN0IiwiZmFtaWx5X25hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.nblpLFlOe5BOBdoFBuTQIcBPPgZgk2EpO29oJU0VeFE9obN9rTEPxOTPr1DeeJdPJ6EbalDocm83XesoS7cbT0YTG2q5X1garsxd_fsCqWRvwnvf4C5GPO-YBIocyN886ca9T5XFV-4L45b6aLuFWZLEY2OslIXi2Ff-zza4ST-HsIzWA5ppr2kKc7VvXRe0gIdQMJymlvp8EfkQd3NN9Xa-14hZRw3fbjxfddqZ4yyVOgMCj7vdw4ZpEnxzniXc8JHpstrJKrxwR-KKyw9KYQVVH94aPktmlvUOOv15Ti7SHQOw2fQyv_S0DhzxqCZMRpc7k_xjRYwVyqljf0gqjA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{accessToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev.one21.app/api/partners/departments",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"one21",
+						"app"
+					],
+					"path": [
+						"api",
+						"partners",
+						"departments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Partners - countries",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJudTFHNy1WTjR0MVlTVDQ1by1pNk4tZ3dRcl9XZ1JlTGVldjZLdmRadVVnIn0.eyJleHAiOjE3NTc3ODA0NTgsImlhdCI6MTc1Nzc3ODY1OCwianRpIjoiNjdmYjNiM2YtM2UxMC00ZWFlLWFiMmUtNTI5M2I1MjJkN2MwIiwiaXNzIjoiaHR0cHM6Ly9kZXYta2V5Y2xvYWsub25lMjEuYXBwL3JlYWxtcy9PbmUyMSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI1YjYxN2VlMS0yYzg2LTRmN2QtYWM3NC00MmVjMjZhNWMxZjEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJvbmUyMSIsInNlc3Npb25fc3RhdGUiOiIyOWVhYmU5YS1hMDhlLTQ3MTYtYWUyNC05YmUyMDc5NTIxZDEiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vb25lMjEuYXBwIiwiaHR0cHM6Ly9kZXYub25lMjEuYXBwIiwiaHR0cDovL2xvY2FsaG9zdDozMDAxIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLW9uZTIxIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjI5ZWFiZTlhLWEwOGUtNDcxNi1hZTI0LTliZTIwNzk1MjFkMSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidGVzdCB0ZXN0IiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGVzdEB0ZXN0LmNvbSIsImdpdmVuX25hbWUiOiJ0ZXN0IiwiZmFtaWx5X25hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.j1ovaPKUw8e3ZuISEFW3Eaj2XiS_9TtkM6HPaJmhr61L5UvRWVadfMhKV7hsB54w1L5wNwKQxNnG4QbLAD9kf5r1r4rjc09W3kKvC78U3RsxjCQE0BU4E6eMjfdrjPQ4Q1sAVcxO5WhgnEtX2QG4mUvCPGrCWXlq2qG3tguPb_JPgcV9I8nj1Fn__J7xAFUKPwiPmIAbjmU6xTNYFqEZad4R6HevMR3pOKF8-ex9F98V7zDVSE5MkkQBwf_n1RVrTEu_15gh1B0llTxW88fOJxCYBGk7PIW2aEeuo6gn4DNzzvwtLf0tA_VScO66LLv-nasw5gqkm-BrUUY3xEP3eA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{accessToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev.one21.app/api/partners/countries",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"one21",
+						"app"
+					],
+					"path": [
+						"api",
+						"partners",
+						"countries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Partners - addresses",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJudTFHNy1WTjR0MVlTVDQ1by1pNk4tZ3dRcl9XZ1JlTGVldjZLdmRadVVnIn0.eyJleHAiOjE3NTc3ODA0NTgsImlhdCI6MTc1Nzc3ODY1OCwianRpIjoiNjdmYjNiM2YtM2UxMC00ZWFlLWFiMmUtNTI5M2I1MjJkN2MwIiwiaXNzIjoiaHR0cHM6Ly9kZXYta2V5Y2xvYWsub25lMjEuYXBwL3JlYWxtcy9PbmUyMSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI1YjYxN2VlMS0yYzg2LTRmN2QtYWM3NC00MmVjMjZhNWMxZjEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJvbmUyMSIsInNlc3Npb25fc3RhdGUiOiIyOWVhYmU5YS1hMDhlLTQ3MTYtYWUyNC05YmUyMDc5NTIxZDEiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vb25lMjEuYXBwIiwiaHR0cHM6Ly9kZXYub25lMjEuYXBwIiwiaHR0cDovL2xvY2FsaG9zdDozMDAxIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLW9uZTIxIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjI5ZWFiZTlhLWEwOGUtNDcxNi1hZTI0LTliZTIwNzk1MjFkMSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidGVzdCB0ZXN0IiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGVzdEB0ZXN0LmNvbSIsImdpdmVuX25hbWUiOiJ0ZXN0IiwiZmFtaWx5X25hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.j1ovaPKUw8e3ZuISEFW3Eaj2XiS_9TtkM6HPaJmhr61L5UvRWVadfMhKV7hsB54w1L5wNwKQxNnG4QbLAD9kf5r1r4rjc09W3kKvC78U3RsxjCQE0BU4E6eMjfdrjPQ4Q1sAVcxO5WhgnEtX2QG4mUvCPGrCWXlq2qG3tguPb_JPgcV9I8nj1Fn__J7xAFUKPwiPmIAbjmU6xTNYFqEZad4R6HevMR3pOKF8-ex9F98V7zDVSE5MkkQBwf_n1RVrTEu_15gh1B0llTxW88fOJxCYBGk7PIW2aEeuo6gn4DNzzvwtLf0tA_VScO66LLv-nasw5gqkm-BrUUY3xEP3eA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{accessToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev.one21.app/api/partners/addresses",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"one21",
+						"app"
+					],
+					"path": [
+						"api",
+						"partners",
+						"addresses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Partners - municipalities",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJudTFHNy1WTjR0MVlTVDQ1by1pNk4tZ3dRcl9XZ1JlTGVldjZLdmRadVVnIn0.eyJleHAiOjE3NTkyMTUyMDEsImlhdCI6MTc1OTIxMzQwMSwianRpIjoiNDUwOWVjNTQtYmVjZC00ZjY1LTkwYzMtMTA5NDlkMjgwZGNiIiwiaXNzIjoiaHR0cHM6Ly9kZXYta2V5Y2xvYWsub25lMjEuYXBwL3JlYWxtcy9PbmUyMSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI1YjYxN2VlMS0yYzg2LTRmN2QtYWM3NC00MmVjMjZhNWMxZjEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJvbmUyMSIsInNlc3Npb25fc3RhdGUiOiJkMTA5NmYzYy1kYzM5LTRjMzYtODU3ZS1hNmZmODNmMGRhNDQiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vb25lMjEuYXBwIiwiaHR0cHM6Ly9kZXYub25lMjEuYXBwIiwiaHR0cDovL2xvY2FsaG9zdDozMDAxIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLW9uZTIxIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6ImQxMDk2ZjNjLWRjMzktNGMzNi04NTdlLWE2ZmY4M2YwZGE0NCIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidGVzdCB0ZXN0IiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGVzdEB0ZXN0LmNvbSIsImdpdmVuX25hbWUiOiJ0ZXN0IiwiZmFtaWx5X25hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.tj2oCW8dpuEaaOXNBIZukP_IyH-B6HH5JqW5ztiBb7dmOOuW_VdkSS_5S2Zj3jAJNRlY1ieKmLZr7yDaLNj-3sdWZknXG2CC0y9oC0UNY1Wdy_tCJMYJQXzWCBdY4AiRCqPYI6RzsB6zzuB7yIv3e4460l_PS4G7hM77nDIh12jMoIfpJs0Yk-7-A_NTrgNDLi64JqjvfN6YHUWg3fp5M8Radj3DNi4x04G80FAQsjWv7Q12EyjSfhkvb-nFRzx5lhuSX0nQ8OEaYfe3IXvsd5P9Rjs1INDGykgST-ekMs5upFNRkoZeRZyqnL04-Eq4ECaEMtSuxt1C1AQdvqltVw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{accessToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev.one21.app/api/partners/municipalities",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"one21",
+						"app"
+					],
+					"path": [
+						"api",
+						"partners",
+						"municipalities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Partners - crear countries",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const errorHandlingMiddleware = (err, req, res, next) => {\r",
+							"  console.error(err);\r",
+							"  res.status(err.status || 500).send(err.message || \"Internal server error\");\r",
+							"};\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJudTFHNy1WTjR0MVlTVDQ1by1pNk4tZ3dRcl9XZ1JlTGVldjZLdmRadVVnIn0.eyJleHAiOjE3NTc3ODI3NDYsImlhdCI6MTc1Nzc4MDk0NiwianRpIjoiNWY0YjljYzYtNjU5Yi00MWM0LWE4ZWItODc0ZTE4MjIyZDE0IiwiaXNzIjoiaHR0cHM6Ly9kZXYta2V5Y2xvYWsub25lMjEuYXBwL3JlYWxtcy9PbmUyMSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI1YjYxN2VlMS0yYzg2LTRmN2QtYWM3NC00MmVjMjZhNWMxZjEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJvbmUyMSIsInNlc3Npb25fc3RhdGUiOiIzNWYwOGM1NS0yNjY5LTQxOWYtYjc0Zi03MzA0ODMyN2EzNTQiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vb25lMjEuYXBwIiwiaHR0cHM6Ly9kZXYub25lMjEuYXBwIiwiaHR0cDovL2xvY2FsaG9zdDozMDAxIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLW9uZTIxIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjM1ZjA4YzU1LTI2NjktNDE5Zi1iNzRmLTczMDQ4MzI3YTM1NCIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidGVzdCB0ZXN0IiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGVzdEB0ZXN0LmNvbSIsImdpdmVuX25hbWUiOiJ0ZXN0IiwiZmFtaWx5X25hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.nblpLFlOe5BOBdoFBuTQIcBPPgZgk2EpO29oJU0VeFE9obN9rTEPxOTPr1DeeJdPJ6EbalDocm83XesoS7cbT0YTG2q5X1garsxd_fsCqWRvwnvf4C5GPO-YBIocyN886ca9T5XFV-4L45b6aLuFWZLEY2OslIXi2Ff-zza4ST-HsIzWA5ppr2kKc7VvXRe0gIdQMJymlvp8EfkQd3NN9Xa-14hZRw3fbjxfddqZ4yyVOgMCj7vdw4ZpEnxzniXc8JHpstrJKrxwR-KKyw9KYQVVH94aPktmlvUOOv15Ti7SHQOw2fQyv_S0DhzxqCZMRpc7k_xjRYwVyqljf0gqjA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{accessToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"code\": \"USA\",\n  \"name\": \"United States\",\n  \"phoneCode\": \"+1\",\n  \"isActive\": true\n}"
+				},
+				"url": {
+					"raw": "https://dev.one21.app/api/partners/countries",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"one21",
+						"app"
+					],
+					"path": [
+						"api",
+						"partners",
+						"countries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Partners - crear departaments",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const errorHandlingMiddleware = (err, req, res, next) => {\r",
+							"  console.error(err);\r",
+							"  res.status(err.status || 500).send(err.message || \"Internal server error\");\r",
+							"};\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJudTFHNy1WTjR0MVlTVDQ1by1pNk4tZ3dRcl9XZ1JlTGVldjZLdmRadVVnIn0.eyJleHAiOjE3NTkyMTUyMDEsImlhdCI6MTc1OTIxMzQwMSwianRpIjoiNDUwOWVjNTQtYmVjZC00ZjY1LTkwYzMtMTA5NDlkMjgwZGNiIiwiaXNzIjoiaHR0cHM6Ly9kZXYta2V5Y2xvYWsub25lMjEuYXBwL3JlYWxtcy9PbmUyMSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI1YjYxN2VlMS0yYzg2LTRmN2QtYWM3NC00MmVjMjZhNWMxZjEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJvbmUyMSIsInNlc3Npb25fc3RhdGUiOiJkMTA5NmYzYy1kYzM5LTRjMzYtODU3ZS1hNmZmODNmMGRhNDQiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vb25lMjEuYXBwIiwiaHR0cHM6Ly9kZXYub25lMjEuYXBwIiwiaHR0cDovL2xvY2FsaG9zdDozMDAxIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLW9uZTIxIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6ImQxMDk2ZjNjLWRjMzktNGMzNi04NTdlLWE2ZmY4M2YwZGE0NCIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidGVzdCB0ZXN0IiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGVzdEB0ZXN0LmNvbSIsImdpdmVuX25hbWUiOiJ0ZXN0IiwiZmFtaWx5X25hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.tj2oCW8dpuEaaOXNBIZukP_IyH-B6HH5JqW5ztiBb7dmOOuW_VdkSS_5S2Zj3jAJNRlY1ieKmLZr7yDaLNj-3sdWZknXG2CC0y9oC0UNY1Wdy_tCJMYJQXzWCBdY4AiRCqPYI6RzsB6zzuB7yIv3e4460l_PS4G7hM77nDIh12jMoIfpJs0Yk-7-A_NTrgNDLi64JqjvfN6YHUWg3fp5M8Radj3DNi4x04G80FAQsjWv7Q12EyjSfhkvb-nFRzx5lhuSX0nQ8OEaYfe3IXvsd5P9Rjs1INDGykgST-ekMs5upFNRkoZeRZyqnL04-Eq4ECaEMtSuxt1C1AQdvqltVw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{accessToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"country\": {\n    \"id\": 1\n  },\n  \"name\": \"Guatemala\",\n  \"isActive\": true\n}\n"
+				},
+				"url": {
+					"raw": "https://dev.one21.app/api/partners/departments",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"one21",
+						"app"
+					],
+					"path": [
+						"api",
+						"partners",
+						"departments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Partners - crear partners",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJudTFHNy1WTjR0MVlTVDQ1by1pNk4tZ3dRcl9XZ1JlTGVldjZLdmRadVVnIn0.eyJleHAiOjE3NTkyMTUyMDEsImlhdCI6MTc1OTIxMzQwMSwianRpIjoiNDUwOWVjNTQtYmVjZC00ZjY1LTkwYzMtMTA5NDlkMjgwZGNiIiwiaXNzIjoiaHR0cHM6Ly9kZXYta2V5Y2xvYWsub25lMjEuYXBwL3JlYWxtcy9PbmUyMSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI1YjYxN2VlMS0yYzg2LTRmN2QtYWM3NC00MmVjMjZhNWMxZjEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJvbmUyMSIsInNlc3Npb25fc3RhdGUiOiJkMTA5NmYzYy1kYzM5LTRjMzYtODU3ZS1hNmZmODNmMGRhNDQiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vb25lMjEuYXBwIiwiaHR0cHM6Ly9kZXYub25lMjEuYXBwIiwiaHR0cDovL2xvY2FsaG9zdDozMDAxIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLW9uZTIxIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6ImQxMDk2ZjNjLWRjMzktNGMzNi04NTdlLWE2ZmY4M2YwZGE0NCIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidGVzdCB0ZXN0IiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGVzdEB0ZXN0LmNvbSIsImdpdmVuX25hbWUiOiJ0ZXN0IiwiZmFtaWx5X25hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.tj2oCW8dpuEaaOXNBIZukP_IyH-B6HH5JqW5ztiBb7dmOOuW_VdkSS_5S2Zj3jAJNRlY1ieKmLZr7yDaLNj-3sdWZknXG2CC0y9oC0UNY1Wdy_tCJMYJQXzWCBdY4AiRCqPYI6RzsB6zzuB7yIv3e4460l_PS4G7hM77nDIh12jMoIfpJs0Yk-7-A_NTrgNDLi64JqjvfN6YHUWg3fp5M8Radj3DNi4x04G80FAQsjWv7Q12EyjSfhkvb-nFRzx5lhuSX0nQ8OEaYfe3IXvsd5P9Rjs1INDGykgST-ekMs5upFNRkoZeRZyqnL04-Eq4ECaEMtSuxt1C1AQdvqltVw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{accessToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"code\": \"PART001\",\n  \"name\": \"Partner Ejemplo\",\n  \"taxId\": \"123456789\",\n  \"email\": \"partner@example.com\",\n  \"isActive\": true,\n  \"isCustomer\": true,\n  \"isVendor\": false,\n  \"isEmployee\": false,\n  \"notes\": \"Este es un socio de ejemplo.\",\n  \"createdBy\": 1,\n  \"updatedBy\": 1\n}"
+				},
+				"url": {
+					"raw": "https://dev.one21.app/api/partners/partners",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"one21",
+						"app"
+					],
+					"path": [
+						"api",
+						"partners",
+						"partners"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Partners - crear contact",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJudTFHNy1WTjR0MVlTVDQ1by1pNk4tZ3dRcl9XZ1JlTGVldjZLdmRadVVnIn0.eyJleHAiOjE3NTkyMTUyMDEsImlhdCI6MTc1OTIxMzQwMSwianRpIjoiNDUwOWVjNTQtYmVjZC00ZjY1LTkwYzMtMTA5NDlkMjgwZGNiIiwiaXNzIjoiaHR0cHM6Ly9kZXYta2V5Y2xvYWsub25lMjEuYXBwL3JlYWxtcy9PbmUyMSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI1YjYxN2VlMS0yYzg2LTRmN2QtYWM3NC00MmVjMjZhNWMxZjEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJvbmUyMSIsInNlc3Npb25fc3RhdGUiOiJkMTA5NmYzYy1kYzM5LTRjMzYtODU3ZS1hNmZmODNmMGRhNDQiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vb25lMjEuYXBwIiwiaHR0cHM6Ly9kZXYub25lMjEuYXBwIiwiaHR0cDovL2xvY2FsaG9zdDozMDAxIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLW9uZTIxIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6ImQxMDk2ZjNjLWRjMzktNGMzNi04NTdlLWE2ZmY4M2YwZGE0NCIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidGVzdCB0ZXN0IiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGVzdEB0ZXN0LmNvbSIsImdpdmVuX25hbWUiOiJ0ZXN0IiwiZmFtaWx5X25hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.tj2oCW8dpuEaaOXNBIZukP_IyH-B6HH5JqW5ztiBb7dmOOuW_VdkSS_5S2Zj3jAJNRlY1ieKmLZr7yDaLNj-3sdWZknXG2CC0y9oC0UNY1Wdy_tCJMYJQXzWCBdY4AiRCqPYI6RzsB6zzuB7yIv3e4460l_PS4G7hM77nDIh12jMoIfpJs0Yk-7-A_NTrgNDLi64JqjvfN6YHUWg3fp5M8Radj3DNi4x04G80FAQsjWv7Q12EyjSfhkvb-nFRzx5lhuSX0nQ8OEaYfe3IXvsd5P9Rjs1INDGykgST-ekMs5upFNRkoZeRZyqnL04-Eq4ECaEMtSuxt1C1AQdvqltVw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{accessToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"firstName\": \"Juan\",\n  \"lastName\": \"Pérez\",\n  \"phone\": \"123456789\",\n  \"isActive\": true,\n  \"birthDate\": \"1990-05-15\",\n  \"businessPartner\": {\n    \"id\": 7\n  }\n}"
+				},
+				"url": {
+					"raw": "https://dev.one21.app/api/partners/contacts",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"one21",
+						"app"
+					],
+					"path": [
+						"api",
+						"partners",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Partners - crear addresses}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJudTFHNy1WTjR0MVlTVDQ1by1pNk4tZ3dRcl9XZ1JlTGVldjZLdmRadVVnIn0.eyJleHAiOjE3NTkyMTUyMDEsImlhdCI6MTc1OTIxMzQwMSwianRpIjoiNDUwOWVjNTQtYmVjZC00ZjY1LTkwYzMtMTA5NDlkMjgwZGNiIiwiaXNzIjoiaHR0cHM6Ly9kZXYta2V5Y2xvYWsub25lMjEuYXBwL3JlYWxtcy9PbmUyMSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI1YjYxN2VlMS0yYzg2LTRmN2QtYWM3NC00MmVjMjZhNWMxZjEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJvbmUyMSIsInNlc3Npb25fc3RhdGUiOiJkMTA5NmYzYy1kYzM5LTRjMzYtODU3ZS1hNmZmODNmMGRhNDQiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vb25lMjEuYXBwIiwiaHR0cHM6Ly9kZXYub25lMjEuYXBwIiwiaHR0cDovL2xvY2FsaG9zdDozMDAxIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLW9uZTIxIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6ImQxMDk2ZjNjLWRjMzktNGMzNi04NTdlLWE2ZmY4M2YwZGE0NCIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidGVzdCB0ZXN0IiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGVzdEB0ZXN0LmNvbSIsImdpdmVuX25hbWUiOiJ0ZXN0IiwiZmFtaWx5X25hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.tj2oCW8dpuEaaOXNBIZukP_IyH-B6HH5JqW5ztiBb7dmOOuW_VdkSS_5S2Zj3jAJNRlY1ieKmLZr7yDaLNj-3sdWZknXG2CC0y9oC0UNY1Wdy_tCJMYJQXzWCBdY4AiRCqPYI6RzsB6zzuB7yIv3e4460l_PS4G7hM77nDIh12jMoIfpJs0Yk-7-A_NTrgNDLi64JqjvfN6YHUWg3fp5M8Radj3DNi4x04G80FAQsjWv7Q12EyjSfhkvb-nFRzx5lhuSX0nQ8OEaYfe3IXvsd5P9Rjs1INDGykgST-ekMs5upFNRkoZeRZyqnL04-Eq4ECaEMtSuxt1C1AQdvqltVw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{accessToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"businessPartner\": {\n    \"id\": 6\n  },\n  \"street\": \"123 Main Street\"\n}"
+				},
+				"url": {
+					"raw": "https://dev.one21.app/api/partners/addresses",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"one21",
+						"app"
+					],
+					"path": [
+						"api",
+						"partners",
+						"addresses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Partners - crear municipios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJudTFHNy1WTjR0MVlTVDQ1by1pNk4tZ3dRcl9XZ1JlTGVldjZLdmRadVVnIn0.eyJleHAiOjE3NTkyMTUyMDEsImlhdCI6MTc1OTIxMzQwMSwianRpIjoiNDUwOWVjNTQtYmVjZC00ZjY1LTkwYzMtMTA5NDlkMjgwZGNiIiwiaXNzIjoiaHR0cHM6Ly9kZXYta2V5Y2xvYWsub25lMjEuYXBwL3JlYWxtcy9PbmUyMSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI1YjYxN2VlMS0yYzg2LTRmN2QtYWM3NC00MmVjMjZhNWMxZjEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJvbmUyMSIsInNlc3Npb25fc3RhdGUiOiJkMTA5NmYzYy1kYzM5LTRjMzYtODU3ZS1hNmZmODNmMGRhNDQiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vb25lMjEuYXBwIiwiaHR0cHM6Ly9kZXYub25lMjEuYXBwIiwiaHR0cDovL2xvY2FsaG9zdDozMDAxIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLW9uZTIxIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6ImQxMDk2ZjNjLWRjMzktNGMzNi04NTdlLWE2ZmY4M2YwZGE0NCIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidGVzdCB0ZXN0IiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGVzdEB0ZXN0LmNvbSIsImdpdmVuX25hbWUiOiJ0ZXN0IiwiZmFtaWx5X25hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.tj2oCW8dpuEaaOXNBIZukP_IyH-B6HH5JqW5ztiBb7dmOOuW_VdkSS_5S2Zj3jAJNRlY1ieKmLZr7yDaLNj-3sdWZknXG2CC0y9oC0UNY1Wdy_tCJMYJQXzWCBdY4AiRCqPYI6RzsB6zzuB7yIv3e4460l_PS4G7hM77nDIh12jMoIfpJs0Yk-7-A_NTrgNDLi64JqjvfN6YHUWg3fp5M8Radj3DNi4x04G80FAQsjWv7Q12EyjSfhkvb-nFRzx5lhuSX0nQ8OEaYfe3IXvsd5P9Rjs1INDGykgST-ekMs5upFNRkoZeRZyqnL04-Eq4ECaEMtSuxt1C1AQdvqltVw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{accessToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Municipio Ejemplo\",\n  \"isActive\": true\n}"
+				},
+				"url": {
+					"raw": "https://dev.one21.app/api/partners/municipalities",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"one21",
+						"app"
+					],
+					"path": [
+						"api",
+						"partners",
+						"municipalities"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
